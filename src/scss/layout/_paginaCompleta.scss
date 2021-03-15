@@ -1,0 +1,13 @@
+.paginaCompleta{
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+
+    .contenido-pagina{
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+        transition: transform 0.56s ease-out;
+    }
+}

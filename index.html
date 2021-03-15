@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Guardianes Del Golfo | Seguridad Privada</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="build/css/app.css">
+</head>
+
+<body>
+    <div class="navegacion-contenido ">
+        <div class="navegacion-contenedor contenedor">
+            <div class="navegacion-logo">
+                <p>Guardianes Del Golfo</p>
+            </div>
+            <nav class="navegacion">
+                <a href="#">Inicio</a>
+                <a href="#nosotros">Nosotros</a>
+                <a href="#">Servicios</a>
+                <a href="#">Contacto</a>
+                <a href="#" class="boton">Postulate</a>
+            </nav>
+            <div class="menu-movil" id="hamburguesa">
+                <button>
+                    <span class="arriba"></span>
+                    <span class="medio"></span>
+                    <span class="abajo"></span>
+                </button>
+            </div>
+        </div>
+    </div>
+   
+    <header class="cabezera">
+        <div class="contenido-header contenedor">
+            <div class="contenido-logo">
+                <img src="src/img/logoSinFondo.png" data-aos="fade-up"  data-aos-delay="50"alt="logo">
+            </div>
+            <div class="contenido-texto" data-aos="flip-up">
+                <h1>Somos tan <span>grandes</span>, como <span>grande</span> es nuestra gente</h1>
+                <div class="contenedor-boton">
+                    <a href="#" class="boton btn-cabezera">Servicios &rightarrow;</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="contenedor-nosotros contenedor" id="nosotros" data-aos="fade-right"data-aos-offset="200"data-aos-delay="50"  data-aos-duration="1000"  data-aos-easing="ease-in-out" data-aos-mirror="true"data-aos-once="false" data-aos-anchor-placement="top-center">
+        <div class="contenido-nosotros">
+            <div class="nosotros-imagen"> 
+                <img src="src/img/nosotros.jpg" alt="imagen nosotros">
+            </div>
+            <div class="nosotros-texto">
+                <h2>Lideres en la seguridad privada, con mas de 20 años de experiencia</h2>
+                <p>Buscamos cubrir con las necesidades y expectativas de
+                    protección de los clientes.</p>
+                <div class="contenedor-boton">
+                    <!-- <a href="#" class="boton btn-cabezera"></a> -->
+                    <button type="button" class="boton btn-cabezera" id="btn-video">Ver video &rtrif;</button>
+                </div>
+    
+            </div>
+            <video  autoplay controls="true" loop class="video ocultar" id="video" >
+                <source src="src/video/video.mp4" type="video/mp4" >
+            </video>
+        </div>
+    </div>
+    
+
+
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="build/js/app.js"></script>
+</body>
+
+</html>

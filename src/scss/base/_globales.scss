@@ -1,0 +1,56 @@
+html{
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+*, *:before, *:after{
+  box-sizing: inherit;
+}
+
+body{
+  font-family: $fuentePrincipal;
+  font-size: 1.6rem;
+}
+
+.contenedor{
+  max-width: 120rem;
+  margin: 0 auto;
+  width: 95%;
+}
+
+img{
+  max-width: 100%;
+}
+
+.margin-top{
+  margin-top: 10rem;
+}
+.margin-bottom{
+  margin-bottom: 10rem;
+}
+.no-margin{
+  margin: 0;
+}
+
+.boton{
+  text-decoration: none;
+  @include telefono{
+    background-color: unset;
+    font-weight: normal;
+  }
+  @include escritorio{
+    background-color: $amarillo;
+    font-weight: $bold;
+  }
+  color: #fff;
+  padding: 1rem 3rem;
+  font-weight: $bold;
+  font-size: 2rem;
+  transition: all .3s ease;
+  position: relative;
+  border: none;
+
+   
+  
+}
+

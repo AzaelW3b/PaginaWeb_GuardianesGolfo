@@ -1,0 +1,89 @@
+
+.cabezera{
+    background-image: url(/src/img/bg.jpg);
+    background-position: top center;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100vh;
+    min-height:80rem;
+    position: relative;
+    z-index: 1;
+
+    &::before{
+        content: '';
+        background-color: rgba(0,0,0,.4);
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+       
+    }
+}
+
+.contenido-header{
+  
+    display: flex;
+    align-items: center;
+    position: relative;
+    height: 100%;
+    z-index: 1;
+    // //animacion de aparición
+    // animation: slide 2s ease;
+
+    @include tablet{
+        padding-top: 8rem;
+    }
+}
+
+
+.contenido-texto{
+    // animation: texto .5s ease forwards;
+
+    h1{
+        text-transform: capitalize;
+        color: #fff;
+        font-size: 3rem;
+        text-align: center;
+        margin: 0;
+        @include tablet{
+            text-align: left;
+            font-size: 5rem;
+        }
+
+        span{
+            color: $amarillo;
+        }
+
+        
+    }
+    
+
+    p{
+        color: #fff;
+        font-size: 2rem;
+    }
+    
+}
+
+.contenido-logo{
+    img{
+        display: none;
+        @include tablet{
+            display: unset;
+        }
+    }
+}
+.contenedor-boton{
+    padding-top: 3rem;
+    display: flex;
+    justify-content: center;
+
+    @include tablet{
+        justify-content: flex-start;
+    }
+    .btn-cabezera{
+        background-color: $amarillo;
+    }
+}
+
