@@ -97,7 +97,7 @@ video{
 }
 
 .pantallaCompleta{
-  // animation: slide 1.3s ease;
+  animation: slide 1.3s ease;
   position: fixed;
   z-index: 1;
   background-color: rgba(0,0,0,.5);
@@ -120,4 +120,25 @@ video{
          opacity: 1;
          transform: scale(1);
      }
+}
+
+//boton para cerrar el videos
+
+.btn-cerrar{
+  width: 5rem;
+  height: 5rem;
+  background-color: $azul;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  font-size: 3rem;
+  border-radius: 50%;
+  margin-top: -10rem;
+  color: #fff;
+ 
+
+  &:hover{
+    cursor: pointer;
+  }
 }

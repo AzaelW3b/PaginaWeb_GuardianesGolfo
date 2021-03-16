@@ -3,12 +3,12 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport"content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Guardianes Del Golfo | Seguridad Privada</title>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="build/css/app.css">
+    
 </head>
 
 <body>
@@ -18,11 +18,11 @@
                 <p>Guardianes Del Golfo</p>
             </div>
             <nav class="navegacion">
-                <a href="#">Inicio</a>
+                <a href="#inicio">Inicio</a>
                 <a href="#nosotros">Nosotros</a>
-                <a href="#">Servicios</a>
-                <a href="#">Contacto</a>
-                <a href="#" class="boton">Postulate</a>
+                <a href="#servicios">Servicios</a>
+                <a href="#contacto">Contacto</a>
+                <a href="postulate.html" class="boton">Postulate</a>
             </nav>
             <div class="menu-movil" id="hamburguesa">
                 <button>
@@ -34,10 +34,10 @@
         </div>
     </div>
    
-    <header class="cabezera">
+    <header class="cabezera" id="inicio">
         <div class="contenido-header contenedor">
             <div class="contenido-logo">
-                <img src="src/img/logoSinFondo.png" data-aos="fade-up"  data-aos-delay="50"alt="logo">
+                <img src="build/img/logoSinFondo.png" data-aos="fade-up"  data-aos-delay="50"alt="logo">
             </div>
             <div class="contenido-texto" data-aos="flip-up">
                 <h1>Somos tan <span>grandes</span>, como <span>grande</span> es nuestra gente</h1>
@@ -51,7 +51,7 @@
     <div class="contenedor-nosotros contenedor" id="nosotros" data-aos="fade-right"data-aos-offset="200"data-aos-delay="50"  data-aos-duration="1000"  data-aos-easing="ease-in-out" data-aos-mirror="true"data-aos-once="false" data-aos-anchor-placement="top-center">
         <div class="contenido-nosotros">
             <div class="nosotros-imagen"> 
-                <img src="src/img/nosotros.jpg" alt="imagen nosotros">
+                <img src="build/img/nosotros.jpg" alt="imagen nosotros">
             </div>
             <div class="nosotros-texto">
                 <h2>Lideres en la seguridad privada, con mas de 20 años de experiencia</h2>
@@ -68,10 +68,19 @@
             </video>
         </div>
     </div>
+   
+    <div class="slider-servicios" id="servicio">
+        <div id="flecha-izquierda" class="flecha"></div>
+        <div id="servicios">
+            <div class="servicio servicio1">
+                
+            </div>
+        </div>
+        <div id="flecha-derecha" class="flecha"></div>
+    </div>
+
+
     
-
-
-
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="build/js/app.js"></script>
 </body>

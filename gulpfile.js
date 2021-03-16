@@ -68,3 +68,5 @@ exports.css = css;
 exports.minificar = minificarCss;
 exports.watchArchivo = watchArchivo;
 exports.default = series (css, javascript, watchArchivo);
+exports.versionWebp = versionWebp;
+exports.imagenes = imagenes;

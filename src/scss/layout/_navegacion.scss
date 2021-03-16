@@ -49,25 +49,32 @@
     display: none;
 
   }
-  display: flex;
+  display:flex;
   flex-direction: column;
-  justify-content: center;
+  // flex-direction: column;
+  // justify-content: center;
   position: absolute;
-  left: 0;
+  right:0;
   top: 78px;
   width: 100%;
-  height: 100vh;
-  text-align: center;
   transition: all .3s ease;
-  background-color: rgba($azul, $alpha: .9);
+  // background-color: rgba($azul, $alpha: .9);
+  background-color: $azul;
   padding: 2rem;
 
 
   a{
-    font-size: 2.5rem;
+    font-size: 2rem;
    
   }
 }
+
+.navegacion.abrir:active{
+  @include escritorio{
+    display: none;
+  }
+}
+
 
 .navegacion{
   

@@ -352,6 +352,10 @@ body {
   font-size: 1.6rem;
 }
 
+body.fijar-body {
+  overflow: hidden;
+}
+
 .contenedor {
   max-width: 120rem;
   margin: 0 auto;
@@ -388,7 +392,7 @@ img {
 @media (min-width: 330px) {
   .boton {
     background-color: unset;
-    font-weight: normal;
+    font-weight: 700;
   }
 }
 
@@ -428,15 +432,12 @@ img {
 .navegacion.abrir {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   position: absolute;
-  left: 0;
+  right: 0;
   top: 78px;
   width: 100%;
-  height: 100vh;
-  text-align: center;
   transition: all .3s ease;
-  background-color: rgba(18, 35, 72, 0.9);
+  background-color: #122348;
   padding: 2rem;
 }
 
@@ -447,7 +448,13 @@ img {
 }
 
 .navegacion.abrir a {
-  font-size: 2.5rem;
+  font-size: 2rem;
+}
+
+@media (min-width: 1200px) {
+  .navegacion.abrir:active {
+    display: none;
+  }
 }
 
 .navegacion {
@@ -579,7 +586,7 @@ img {
 }
 
 .cabezera {
-  background-image: url(/src/img/bg.jpg);
+  background-image: url(/build/img/bg.jpg);
   background-position: top center;
   background-attachment: fixed;
   background-size: cover;
@@ -760,6 +767,7 @@ video {
 }
 
 .pantallaCompleta {
+  animation: slide 1.3s ease;
   position: fixed;
   z-index: 1;
   background-color: rgba(0, 0, 0, 0.5);
@@ -779,4 +787,21 @@ video {
     opacity: 1;
     transform: scale(1);
   }
+}
+
+.btn-cerrar {
+  width: 5rem;
+  height: 5rem;
+  background-color: #122348;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  border-radius: 50%;
+  margin-top: -10rem;
+  color: #fff;
+}
+
+.btn-cerrar:hover {
+  cursor: pointer;
 }

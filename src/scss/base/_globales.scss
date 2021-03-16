@@ -10,6 +10,10 @@ html{
 body{
   font-family: $fuentePrincipal;
   font-size: 1.6rem;
+   //para fijar el body, cuando se de click mostrar video
+   &.fijar-body{
+    overflow: hidden;
+}
 }
 
 .contenedor{
@@ -36,7 +40,7 @@ img{
   text-decoration: none;
   @include telefono{
     background-color: unset;
-    font-weight: normal;
+    font-weight: $bold;
   }
   @include escritorio{
     background-color: $amarillo;

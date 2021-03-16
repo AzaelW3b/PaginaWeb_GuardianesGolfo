@@ -1,6 +1,6 @@
 
 .cabezera{
-    background-image: url(/src/img/bg.jpg);
+    background-image: url(/build/img/bg.jpg);
     background-position: top center;
     background-attachment: fixed;
     background-size: cover;
@@ -66,11 +66,11 @@
     
 }
 
-.contenido-logo{
+ .contenido-logo{
     img{
         display: none;
         @include tablet{
-            display: unset;
+             display: unset;
         }
     }
 }
