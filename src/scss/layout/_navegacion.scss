@@ -15,7 +15,7 @@
 // }
 
 .navegacion-contenido{
-  background-color: $azul;
+   background-color: $azul;
   position: fixed;
   z-index: 2;
   width: 100%;
@@ -45,6 +45,7 @@
 }
 
 .navegacion.abrir{
+  animation: slide 1s ease;
   @include escritorio{
     display: none;
 
@@ -81,6 +82,7 @@
   // @include tablet{display: none;}
   // @include telefono{display: none;}
   display: none;
+  
   @include escritorio{
     display: block;
   }
@@ -88,10 +90,16 @@
       text-decoration: none;
       padding: 1.5rem;
       font-size: 1.8rem;
+      transition: all .3s ease;
       
   &:hover{
     color: $amarillo;
+  
 
+  }
+  &:hover:last-child{
+      background-color: unset;
+      
   }
     }
   
@@ -214,4 +222,21 @@
     transform: translateY(0px) rotate(0deg);
   }
 
+}
+
+.activo{
+  // border-bottom: 2px solid $amarillo;
+  color: $amarillo !important;
+}
+@keyframes slide{
+  0%{
+      opacity: 1;
+      transform: scale(1.1);
+      transform: translateX(-100%);
+  }
+  100%{
+      opacity: 1;
+      transform: scale(1);
+      transform: translateY(0);
+  }
 }

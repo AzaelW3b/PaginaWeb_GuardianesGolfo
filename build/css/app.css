@@ -430,6 +430,7 @@ img {
 }
 
 .navegacion.abrir {
+  animation: slide 1s ease;
   display: flex;
   flex-direction: column;
   position: absolute;
@@ -471,10 +472,15 @@ img {
   text-decoration: none;
   padding: 1.5rem;
   font-size: 1.8rem;
+  transition: all .3s ease;
 }
 
 .navegacion a:hover {
   color: #EFB810;
+}
+
+.navegacion a:hover:last-child {
+  background-color: unset;
 }
 
 /*Menu hamburguesa*/
@@ -585,15 +591,38 @@ img {
   }
 }
 
+.activo {
+  color: #EFB810 !important;
+}
+
+@keyframes slide {
+  0% {
+    opacity: 1;
+    transform: scale(1.1);
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+    transform: translateY(0);
+  }
+}
+
 .cabezera {
   background-image: url(/build/img/bg.jpg);
-  background-position: top center;
-  background-attachment: fixed;
+  background-position: center center;
   background-size: cover;
   height: 100vh;
   min-height: 80rem;
   position: relative;
   z-index: 1;
+}
+
+@media (min-width: 768px) {
+  .cabezera {
+    background-position: top center;
+    background-attachment: fixed;
+  }
 }
 
 .cabezera::before {
@@ -670,9 +699,73 @@ img {
   background-color: #EFB810;
 }
 
+.contenedor-boton .btn-cabezera:hover {
+  cursor: pointer;
+}
+
+.informacion-extra {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.texto-informacion {
+  background-image: url(/src/img/contacto.jpg);
+  height: 800px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.texto-informacion::after {
+  content: '';
+  background-color: rgba(18, 35, 72, 0.9);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.texto-informacion p {
+  position: relative;
+  z-index: 1;
+  font-size: 6rem;
+  color: #fff;
+  text-align: center;
+}
+
+.iconos-informacion {
+  margin-left: 3rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.icono {
+  margin-top: 6rem;
+  text-align: center;
+}
+
+.icono .icono-info {
+  color: #122348;
+  font-size: 8rem;
+}
+
+.icono .txt-info p {
+  font-size: 2.2rem;
+}
+
+.contenedor-nosotros {
+  overflow: hidden;
+}
+
 .contenedor-nosotros .contenido-nosotros {
   padding-top: 5rem;
   height: 100vh;
+  min-height: 800px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -687,6 +780,26 @@ img {
 
 .nosotros-texto {
   background-color: #fff;
+}
+
+@media (min-width: 1200px) {
+  .nosotros-texto {
+    padding: 1.5rem 3rem;
+    box-shadow: 0 0.2em 1em rgba(116, 105, 105, 0.2);
+  }
+}
+
+@media (min-width: 1200px) {
+  .nosotros-texto::before {
+    content: 'Sobre Nosotros';
+    font-size: 6rem;
+    font-weight: 700;
+    color: #122348;
+    z-index: 3;
+    position: absolute;
+    top: -90px;
+    left: 0;
+  }
 }
 
 @media (min-width: 768px) {
@@ -766,8 +879,11 @@ video {
   }
 }
 
-.pantallaCompleta {
+.video {
   animation: slide 1.3s ease;
+}
+
+.pantallaCompleta {
   position: fixed;
   z-index: 1;
   background-color: rgba(0, 0, 0, 0.5);
@@ -782,10 +898,12 @@ video {
   0% {
     opacity: 0;
     transform: scale(1.1);
+    transform: translateX(-100%);
   }
   100% {
     opacity: 1;
     transform: scale(1);
+    transform: translateY(0);
   }
 }
 
@@ -804,4 +922,292 @@ video {
 
 .btn-cerrar:hover {
   cursor: pointer;
+}
+
+.contenedor-historia {
+  overflow: hidden;
+  background-color: #122348;
+  height: auto;
+  min-height: 800px;
+}
+
+@media (min-width: 768px) {
+  .contenedor-historia {
+    height: 100vh;
+  }
+}
+
+.contenedor-historia .contenido-historia {
+  padding-top: 5rem;
+}
+
+.contenedor-historia .contenido-historia h2 {
+  color: #fff;
+  font-size: 4rem;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .contenedor-historia .contenido-historia h2 {
+    font-size: 6rem;
+    text-align: left;
+  }
+}
+
+@media (min-width: 768px) {
+  .contentenedor-informacion {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: 768px) {
+  .contentenedor-informacion .cards-historia, .contentenedor-informacion .imagen-historia {
+    flex: 0 0 calc(50% - 1rem);
+  }
+}
+
+@media (min-width: 768px) {
+  .imagen-historia {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.card .icono-card {
+  padding: 4.5rem;
+  border-radius: 50%;
+  font-size: 4rem;
+  transition: background-color .3s ease;
+}
+
+.card .texto-card {
+  color: #fff;
+  margin-left: 2rem;
+}
+
+.card .texto-card h3 {
+  color: #EFB810;
+  font-size: 2.2rem;
+}
+
+.cerebro {
+  color: rgba(248, 183, 194, 0.979);
+}
+
+.calidad {
+  color: #15ac15;
+}
+
+.engranes {
+  color: rgba(23, 131, 255, 0.63);
+}
+
+.borde1 {
+  border: 4px solid rgba(248, 183, 194, 0.979);
+}
+
+.borde1:hover {
+  background-color: rgba(248, 183, 194, 0.979);
+}
+
+.borde1:hover .cerebro {
+  color: #fff;
+}
+
+.borde2 {
+  border: 4px solid #15ac15;
+}
+
+.borde2:hover {
+  background-color: #15ac15;
+}
+
+.borde2:hover .calidad {
+  color: #fff;
+}
+
+.borde3 {
+  border: 4px solid rgba(23, 131, 255, 0.63);
+}
+
+.borde3:hover {
+  background-color: rgba(23, 131, 255, 0.63);
+}
+
+.borde3:hover .engranes {
+  color: #fff;
+}
+
+.seccion-servicios {
+  padding-top: 4rem;
+  overflow: hidden;
+  height: auto;
+}
+
+.seccion-servicios h2 {
+  text-align: center;
+  color: #122348;
+  font-size: 5rem;
+}
+
+@media (min-width: 768px) {
+  .contenedor-servicios {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 2rem;
+  }
+}
+
+.contenedor-servicios .servicio {
+  padding: 2rem;
+  margin-bottom: 2rem;
+  transition: all .3s ease;
+  box-shadow: 0 0.2em 1em rgba(116, 105, 105, 0.2);
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+  .contenedor-servicios .servicio {
+    margin-bottom: 0;
+  }
+}
+
+.contenedor-servicios .servicio:hover {
+  background-color: #122348;
+}
+
+.contenedor-servicios .servicio:hover .icono-servicio, .contenedor-servicios .servicio:hover .informacion-servicio, .contenedor-servicios .servicio:hover .icono-servicio h3 {
+  color: #fff;
+}
+
+.contenedor-servicios .servicio:hover .informacion-servicio p {
+  color: #fff;
+}
+
+.contenedor-servicios .servicio:hover .boton-contacto a {
+  background-color: #fff;
+  color: #122348;
+}
+
+.ultimo {
+  grid-column: 2/3;
+}
+
+.icono-servicio {
+  color: #122348;
+  text-align: center;
+  font-size: 6rem;
+}
+
+.icono-servicio h3 {
+  text-align: center;
+  font-size: 3rem;
+  color: #122348;
+}
+
+.informacion-servicio p {
+  font-size: 1.8rem;
+}
+
+.boton-contacto {
+  display: flex;
+  justify-content: center;
+}
+
+.boton-contacto a {
+  text-decoration: none;
+  background-color: #122348;
+  font-size: 1.8rem;
+  padding: 1rem 3rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.contacto {
+  padding-top: 20rem;
+  height: 100vh;
+}
+
+.contacto h2 {
+  font-size: 6rem;
+  margin-bottom: 4rem;
+  color: #122348;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .contacto-tarjetas {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.tarjeta {
+  width: calc(33.3% - 20px);
+  padding: 3rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 0 0.2em 1em rgba(116, 105, 105, 0.2);
+}
+
+.tarjeta .icono-contacto {
+  color: #fff;
+  font-size: 2.8rem;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #122348;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s linear;
+}
+
+.tarjeta:hover .icono-contacto {
+  background: none;
+  color: #122348;
+  transform: scale(1.6);
+}
+
+.tarjeta p {
+  margin-top: 2rem;
+  font-size: 2rem;
+  opacity: 0;
+  transition: 0.3s linear;
+}
+
+.tarjeta:hover p {
+  max-height: 40px;
+  opacity: 1;
+}
+
+/*Formulario de contacto*/
+.formulario-contacto {
+  background-image: url(/src/img/contacto.jpg);
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: relative;
+}
+
+.formulario-contacto::after {
+  content: '';
+  background-color: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }

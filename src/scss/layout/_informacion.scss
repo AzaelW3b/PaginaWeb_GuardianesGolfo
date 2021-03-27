@@ -1,0 +1,52 @@
+.informacion-extra{
+   display: grid;
+   grid-template-columns: repeat(2,1fr);
+}
+
+.texto-informacion{
+    background-image: url(/src/img/contacto.jpg);
+    height: 800px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position:center center;
+    background-attachment: fixed;
+    position: relative;
+    display: flex;
+    align-items: center;
+    &::after{
+        content: '';
+        background-color: rgba($azul,.9);
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+    p{
+        position: relative;
+        z-index: 1;
+        font-size: 6rem;
+        color: #fff;
+        text-align: center;
+        
+    }
+}
+.iconos-informacion{
+    margin-left: 3rem;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+.icono{
+    margin-top: 6rem;
+    text-align: center;
+    .icono-info{
+       color: $azul;
+       font-size: 8rem;
+    }
+
+    .txt-info{
+        p{
+            font-size: 2.2rem;
+        }
+    }
+}

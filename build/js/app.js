@@ -1,6 +1,5 @@
 document.addEventListener('DOMContentLoaded', ()=>{
 	scrollNav();
-	funcion();
 	menuHamburguesa();
 	mostrarVideo();
 	
@@ -47,6 +46,9 @@ function mostrarVideo(){
 
 		divVideo.classList.add('pantallaCompleta');
 		
+	
+	
+		
 		body.appendChild(divVideo);
 		console.log(divVideo);
 
@@ -54,10 +56,12 @@ function mostrarVideo(){
 	
 	divVideo.onclick = function(){
 		divVideo.remove();
+	
 	}
 
 	btnCerrar.onclick = function(){
 		divVideo.remove();
+	
 	}
 }
 
@@ -68,6 +72,7 @@ function menuHamburguesa(){
 	const btnMenuMovil = document.querySelector('.menu-movil button');
 
 	nav.addEventListener('click', e =>{
+		
 		//.toggle, lo que hace es añadir la clase si no esta o desaparecerla si, si lo esta
 		nav.classList.toggle('abrir'); 
 		navegacionNormal.classList.toggle('abrir');
@@ -88,10 +93,12 @@ function menuHamburguesa(){
 		});
 	});
 	
+	
 }
 
 function scrollNav(){
 	const enlaces = document.querySelectorAll('.navegacion a');
+	let numeroEnlace = 1;
 
 	enlaces.forEach(enlace =>{
 		
@@ -99,31 +106,45 @@ function scrollNav(){
 			e.preventDefault();
 			const seccion = document.querySelector(e.target.attributes.href.value);
 
-			if(e.target.attributes.href.value === 'postulate.html'){
-				location.href='postulate.html';
+			// if(e.target.attributes.href.value === 'postulate.html'){
+			// 	location.href='postulate.html';
 
-			}else if(e.target.attributes.href.value === 'index.html'){
-				location.href='index.html';
-			}else{
-				seccion.scrollIntoView({
-					behavior:'smooth'
-				});
-			}
+			// }else if(e.target.attributes.href.value === 'index.html'){
+			// 	location.href='index.html';
+			// }else{
+			// 	seccion.scrollIntoView({
+			// 		behavior:'smooth'
+			// 	});
+			// }
 			
+			seccion.scrollIntoView({
+				behavior:'smooth'
+			});
+		
+			// const enlaceAnterior = document.querySelector('.navegacion a');
+			
+			// if(enlaceAnterior){
+			// 	enlaceAnterior.classList.remove('activo');
+			// }else{
+			// 	enlace.classList.add('activo');
+			// }
+			// if(e.target.tagName === 'A' ){
+				
+			// 	enlace.classList.toggle('activo');
+			
+			// }
+			numeroEnlace = parseInt(e.target.dataset.numero);
+			
+			//enlace anterior
+			const enlaceAnterior = document.querySelector('.navegacion a');
 
+			if(enlaceAnterior){
+				enlaceAnterior.classList.remove('activo');
+			}
+			const tab = document.querySelector(`[data-numero="${numeroEnlace}"]`);
+			tab.classList.add('activo')
 		
 		});
 	});
 }
 
-let mediaquery = window.matchMedia("(min-width: 1200px)");
-const btnMenuMovil = document.querySelector('.navegacion');
-function funcion() {
-
-  if (mediaquery.matches) {
-	// console.log(mediaquery.matches);
-	btnMenuMovil.classList.remove('abrir');
-	console.log(btnMenuMovil);
-  }
-  
-}

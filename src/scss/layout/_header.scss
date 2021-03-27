@@ -1,8 +1,12 @@
 
 .cabezera{
     background-image: url(/build/img/bg.jpg);
-    background-position: top center;
-    background-attachment: fixed;
+    background-position: center center;
+    @include tablet{
+        background-position: top center;
+        background-attachment: fixed;
+    }
+ 
     background-size: cover;
     height: 100vh;
     min-height:80rem;
@@ -84,6 +88,10 @@
     }
     .btn-cabezera{
         background-color: $amarillo;
+
+        &:hover{
+            cursor: pointer;
+        }
     }
 }
 

@@ -3,12 +3,14 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Guardianes Del Golfo | Seguridad Privada</title>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/753766ce2c.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="build/css/app.css">
-    
+
 </head>
 
 <body>
@@ -18,11 +20,12 @@
                 <p>Guardianes Del Golfo</p>
             </div>
             <nav class="navegacion">
-                <a href="#inicio">Inicio</a>
-                <a href="#nosotros">Nosotros</a>
-                <a href="#servicios">Servicios</a>
-                <a href="#contacto">Contacto</a>
-                <a href="postulate.html" class="boton">Postulate</a>
+                <a href="#inicio" data-numero="1">Inicio</a>
+                <a href="#nosotros" data-numero="2">Nosotros</a>
+                <a href="#servicios" data-numero="3">Servicios</a>
+                <a href="#contacto" data-numero="4">Contacto</a>
+                <a href="postulate.html" data-numero="5">Postulate</a>
+                <!-- class="boton" -->
             </nav>
             <div class="menu-movil" id="hamburguesa">
                 <button>
@@ -33,27 +36,87 @@
             </div>
         </div>
     </div>
-   
+
     <header class="cabezera" id="inicio">
         <div class="contenido-header contenedor">
             <div class="contenido-logo">
-                <img src="build/img/logoSinFondo.png" data-aos="fade-up"  data-aos-delay="50"alt="logo">
+                <img src="build/img/logoSinFondo.png" data-aos="fade-up" data-aos-delay="50" alt="logo">
             </div>
             <div class="contenido-texto" data-aos="flip-up">
                 <h1>Somos tan <span>grandes</span>, como <span>grande</span> es nuestra gente</h1>
                 <div class="contenedor-boton">
-                    <a href="#" class="boton btn-cabezera">Servicios &rightarrow;</a>
+                    <a href="#servicios" class="boton btn-cabezera">Servicios &rightarrow;</a>
                 </div>
             </div>
         </div>
     </header>
+    <div class="informacion-extra">
+        <div class="texto-informacion">
+            <p>¿Por qué trabajar con Guardianes del Golfo?</p>
+        </div>
+        <div class="iconos-informacion" data-aos="fade-right" data-aos-offset="200" data-aos-delay="50"
+        data-aos-duration="1000">
+          <div class="icono">
+            <div class="icono-info">
+                <i class="fas fa-shield-alt"></i>
+            </div>
+            <div class="txt-info">
+                <p>Precios competitivos</p>
+            </div>
+          </div>
+          <div class="icono">
+            <div class="icono-info">
+                <i class="fab fa-watchman-monitoring"></i>
+            </div>
+            <div class="txt-info">
+                <p>Precios competitivos</p>
+            </div>
+          </div>
+          <div class="icono">
+            <div class="icono-info">
+                <i class="fas fa-shield-alt"></i>
+            </div>
+            <div class="txt-info">
+                <p>Precios competitivos</p>
+            </div>
+          </div>
+          <div class="icono">
+            <div class="icono-info">
+                <i class="fab fa-watchman-monitoring"></i>
+            </div>
+            <div class="txt-info">
+                <p>Precios competitivos</p>
+            </div>
+          </div>
+          <div class="icono">
+            <div class="icono-info">
+                <i class="fas fa-shield-alt"></i>
+            </div>
+            <div class="txt-info">
+                <p>Precios competitivos</p>
+            </div>
+          </div>
+          <div class="icono">
+            <div class="icono-info">
+                <i class="fab fa-watchman-monitoring"></i>
+            </div>
+            <div class="txt-info">
+                <p>Precios competitivos</p>
+            </div>
+          </div>
+        </div>
+    </div>
+    <!-- data-aos="fade-right"data-aos-offset="200"data-aos-delay="50"  data-aos-duration="1000"  data-aos-easing="ease-in-out" data-aos-mirror="true"data-aos-once="false" data-aos-anchor-placement="top-center" -->
+    <div class="contenedor-nosotros" id="nosotros">
 
-    <div class="contenedor-nosotros contenedor" id="nosotros" data-aos="fade-right"data-aos-offset="200"data-aos-delay="50"  data-aos-duration="1000"  data-aos-easing="ease-in-out" data-aos-mirror="true"data-aos-once="false" data-aos-anchor-placement="top-center">
-        <div class="contenido-nosotros">
-            <div class="nosotros-imagen"> 
+        <div class="contenido-nosotros contenedor">
+
+            <div class="nosotros-imagen" data-aos="fade-left" data-aos-offset="200" data-aos-delay="50"
+                data-aos-duration="1000">
                 <img src="build/img/nosotros.jpg" alt="imagen nosotros">
             </div>
-            <div class="nosotros-texto">
+            <div class="nosotros-texto" data-aos="fade-right" data-aos-offset="200" data-aos-delay="50"
+                data-aos-duration="1000">
                 <h2>Lideres en la seguridad privada, con mas de 20 años de experiencia</h2>
                 <p>Buscamos cubrir con las necesidades y expectativas de
                     protección de los clientes.</p>
@@ -61,26 +124,180 @@
                     <!-- <a href="#" class="boton btn-cabezera"></a> -->
                     <button type="button" class="boton btn-cabezera" id="btn-video">Ver video &rtrif;</button>
                 </div>
-    
+
             </div>
-            <video  autoplay controls="true" loop class="video ocultar" id="video" >
-                <source src="src/video/video.mp4" type="video/mp4" >
+            <video autoplay controls="true" loop class="video ocultar" id="video">
+                <source src="src/video/video.mp4" type="video/mp4">
             </video>
         </div>
     </div>
-   
-    <div class="slider-servicios" id="servicio">
-        <div id="flecha-izquierda" class="flecha"></div>
-        <div id="servicios">
-            <div class="servicio servicio1">
-                
+
+    <div class="contenedor-historia ">
+        <div class="contenido-historia contenedor">
+            <div class="titulo-historia" data-aos="fade-up" data-aos-offset="200" data-aos-delay="50"
+                data-aos-duration="1000">
+                <h2>Nuestra historia</h2>
             </div>
+
+            <div class="contentenedor-informacion">
+                <div class="cards-historia" data-aos="fade-right" data-aos-offset="200" data-aos-delay="50"
+                    data-aos-duration="1000">
+                    <div class="card">
+                        <div class="icono-card borde1">
+                            <i class="fas fa-brain cerebro"></i>
+                        </div>
+                        <div class="texto-card">
+                            <h3>Experiencia</h3>
+                            <p>Somos una empresa que se distingue por la disciplina y
+                                el honor que representa a nuestro guardias de seguridad
+                                en la operación de sus consignas.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="icono-card  borde2">
+                            <i class="fas fa-check-circle calidad"></i>
+                        </div>
+                        <div class="texto-card">
+                            <h3>Adaptación</h3>
+                            <p>Somos una empresa que se distingue por la disciplina y
+                                el honor que representa a nuestro guardias de seguridad
+                                en la operación de sus consignas.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="icono-card borde3">
+                            <i class="fas fa-cogs engranes"></i>
+                        </div>
+                        <div class="texto-card">
+                            <h3>Eficiencia</h3>
+                            <p>Somos una empresa que se distingue por la disciplina y
+                                el honor que representa a nuestro guardias de seguridad
+                                en la operación de sus consignas.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="imagen-historia" data-aos="fade-left" data-aos-offset="200" data-aos-delay="50"
+                    data-aos-duration="1000">
+                    <img src="build/img/historia.jpg" alt="">
+                </div>
+            </div>
+
         </div>
-        <div id="flecha-derecha" class="flecha"></div>
     </div>
 
+    <section class="seccion-servicios contenedor"  id="servicios">
+        <h2 data-aos="fade-right" data-aos-offset="200" data-aos-delay="50"
+        data-aos-duration="1000">Nuestros Servicios</h2>
+        <div class="contenedor-servicios">
+            <div class="servicio" data-aos="fade-left" data-aos-offset="200" data-aos-delay="50"
+            data-aos-duration="1000">
+                <div class="icono-servicio">
+                    <i class="fas fa-user-shield"></i>
+                    <h3>Seguridad Fisica</h3>
+                </div>
+                <div class="informacion-servicio">
+                  
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo nobis mollitia eaque quam ratione
+                        numquam voluptatum.</p>
 
-    
+                        <div class="boton-contacto">
+                            <a href="#">Contratar</a>
+                        </div>
+                </div>
+            </div>
+            <div class="servicio" data-aos="fade-left" data-aos-offset="200" data-aos-delay="50"
+                    data-aos-duration="1000">
+                <div class="icono-servicio">
+                    <i class="fab fa-watchman-monitoring"></i>
+                    <h3>Monitoreo</h3>
+                </div>
+                <div class="informacion-servicio">
+                  
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo nobis mollitia eaque quam ratione
+                        numquam voluptatum.</p>
+                        <div class="boton-contacto">
+                            <a href="#">Contratar</a>
+                        </div>
+                </div>
+            </div>
+            <div class="servicio" data-aos="fade-right" data-aos-offset="200" data-aos-delay="50"
+            data-aos-duration="1000">
+                <div class="icono-servicio">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Custodia</h3>
+                </div>
+                <div class="informacion-servicio">
+                    
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo nobis mollitia eaque quam ratione
+                        numquam voluptatum.</p>
+                        <div class="boton-contacto">
+                            <a href="#">Contratar</a>
+                        </div>
+                </div>
+            </div>
+            <div class="servicio ultimo" data-aos="fade-up" data-aos-offset="200" data-aos-delay="50"
+            data-aos-duration="1000">
+                <div class="icono-servicio">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Custodia</h3>
+                </div>
+                <div class="informacion-servicio">
+                    
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo nobis mollitia eaque quam ratione
+                        numquam voluptatum.</p>
+                        <div class="boton-contacto">
+                            <a href="#">Contratar</a>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contacto">
+        <h2 class="contenedor">Contáctanos</h2>
+        <div class="contacto-tarjetas contenedor" servicio ultimo" data-aos="fade-left" data-aos-offset="200" data-aos-delay="50"
+        data-aos-duration="1000">
+            
+            <div class="tarjeta">
+                <i class="icono-contacto far fa-envelope"></i>
+                <p>ventas@guardianesdelgolfo.com.mx</p>
+            </div>
+            <div class="tarjeta">
+                <i class="icono-contacto fas fa-phone"></i>
+                <p>+52 229-591-22-46</p>
+            </div>
+              <div class="tarjeta">
+                <i class="icono-contacto fas fa-map-marker-alt"></i>
+                <p>Veracruz, ver</p>
+            </div>
+        </div>
+        <div class="formulario-contacto">
+            <div class="contenedor-formulario">
+                <form action="" class="formulario">
+                    <div class="texto-formulario">
+                        <h3>Formulario de contacto</h3>
+                    </div>
+                    <div>
+                        <label for="nombre">Nombre</label>
+                        <input type="text" placeholder="" id="nombre">
+                    </div>
+                    <div>
+                        <label for="nombre"></label>
+                        <input type="text" placeholder="" id="nombre">
+                    </div>
+                    <div>
+                        <label for="nombre">Nombre</label>
+                        <input type="text" placeholder="" id="nombre">
+                    </div>
+                   
+                </form>
+            </div>
+        </div>
+
+    </section>
+
+
+
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="build/js/app.js"></script>
 </body>

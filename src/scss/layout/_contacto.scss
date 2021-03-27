@@ -1,0 +1,99 @@
+// .contacto{
+//     background-image: url(/src/img/contacto.jpg);
+//     height: 100vh;
+//     background-size: cover;
+//     background-repeat: no-repeat;
+//     background-position: center center;
+// }
+.contacto{
+    padding-top: 20rem;
+    height: 100vh;
+    h2{
+        font-size: 6rem;
+        margin-bottom: 4rem;
+        color: $azul;
+        text-align: center;
+    }
+}
+.contacto-tarjetas{
+    @include tablet{
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.tarjeta{
+    // background-color:$azul;
+    width: calc(33.3% - 20px);
+    padding:3rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0 .2em 1em rgba(116, 105, 105, 0.2);
+    
+
+    .icono-contacto{
+        color: #fff;
+        font-size: 2.8rem;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background-color: $azul;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: 0.3s linear;
+       
+    }
+
+}
+
+.tarjeta {
+    &:hover{
+       .icono-contacto{
+        background: none;
+        color: $azul;
+        transform: scale(1.6);
+       }
+       
+    }
+}
+
+.tarjeta{
+    p{
+        margin-top: 2rem;
+        font-size: 2rem;
+        opacity: 0;
+        transition: 0.3s linear;
+        
+    }
+   
+    &:hover{
+        p{
+            max-height: 40px;
+            opacity: 1;
+        }
+    }
+}
+
+/*Formulario de contacto*/
+.formulario-contacto{
+    background-image: url(/src/img/contacto.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: relative;
+
+    &::after{
+        content: '';
+        background-color: rgba(0,0,0,.4);
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+}

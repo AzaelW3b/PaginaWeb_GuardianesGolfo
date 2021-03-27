@@ -1,0 +1,86 @@
+.seccion-servicios {
+padding-top: 4rem;
+overflow: hidden;    
+height: auto;
+
+   h2{
+    //    background-color: $azul;
+       text-align: center;
+       color: $azul;
+       font-size: 5rem;
+      
+   }
+}
+.contenedor-servicios{
+    @include tablet{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        column-gap: 2rem;
+    }
+    
+    .servicio{
+        padding:2rem;
+        margin-bottom: 2rem;
+        transition: all .3s ease;
+        box-shadow: 0 .2em 1em rgba(116, 105, 105, 0.2);
+        margin-bottom: 2rem;
+        @include tablet{
+            margin-bottom: 0;
+        }
+
+        &:hover{
+            .icono-servicio, .informacion-servicio, .icono-servicio h3{
+                color: #fff;
+            }
+
+            .informacion-servicio p{
+               color: #fff;
+               
+            }
+            .boton-contacto a{
+                background-color: #fff;
+                color: $azul;
+            }
+           
+            background-color: $azul;
+        }
+    }
+}
+
+.ultimo{
+    grid-column: 2/3;
+}
+
+.icono-servicio{
+    color: $azul;
+    text-align: center;
+    font-size: 6rem;
+       h3{
+        text-align: center;
+        font-size: 3rem;
+        color: $azul;
+    }
+}
+
+.informacion-servicio{
+ 
+   p{
+       font-size: 1.8rem;
+   }
+}
+
+.boton-contacto {
+    display: flex;
+    justify-content: center;
+   
+   
+    a{
+        text-decoration: none;
+        background-color: $azul;
+        font-size: 1.8rem;
+        padding: 1rem 3rem;
+        font-weight: bold;
+        color: #fff;
+    }
+    }
+   

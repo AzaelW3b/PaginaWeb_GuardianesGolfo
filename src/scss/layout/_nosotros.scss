@@ -1,8 +1,9 @@
 .contenedor-nosotros{
-
+overflow: hidden;
   .contenido-nosotros{ 
     padding-top: 5rem;
     height: 100vh;
+    min-height: 800px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -21,8 +22,31 @@
   
 }
 .nosotros-texto{
-  background-color: #fff;
+ 
+  @include escritorio{
+    padding:1.5rem 3rem;
+    box-shadow: 0 .2em 1em rgba(116, 105, 105, 0.2);
+  }
 
+  background-color: #fff;
+  
+  @include escritorio{
+    
+    &::before{
+      content: 'Sobre Nosotros';
+      font-size: 6rem;
+      font-weight: $bold;
+      color: $azul;
+
+      z-index: 3;
+      position: absolute;
+      // left: -193px;
+      // bottom: 163px;
+      // transform: rotate(-90deg);
+      top: -90px;
+      left: 0;
+    }
+  }
 
   @include tablet{
     order: -1;
@@ -95,9 +119,12 @@ video{
   height: 75%;
  }
 }
+.video{
+  animation: slide 1.3s ease;
+}
 
 .pantallaCompleta{
-  animation: slide 1.3s ease;
+  
   position: fixed;
   z-index: 1;
   background-color: rgba(0,0,0,.5);
@@ -115,10 +142,12 @@ video{
      0%{
          opacity: 0;
          transform: scale(1.1);
+         transform: translateX(-100%);
      }
      100%{
          opacity: 1;
          transform: scale(1);
+         transform: translateY(0);
      }
 }
 
