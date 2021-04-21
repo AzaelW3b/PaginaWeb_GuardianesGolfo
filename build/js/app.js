@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', ()=>{
-	scrollNav();
+
 	menuHamburguesa();
 	mostrarVideo();
 	
@@ -96,55 +96,55 @@ function menuHamburguesa(){
 	
 }
 
-function scrollNav(){
-	const enlaces = document.querySelectorAll('.navegacion a');
-	let numeroEnlace = 1;
+// function scrollNav(){
+// 	const enlaces = document.querySelectorAll('.navegacion a');
+// 	let numeroEnlace = 1;
 
-	enlaces.forEach(enlace =>{
+// 	enlaces.forEach(enlace =>{
 		
-		enlace.addEventListener('click', (e)=>{
-			e.preventDefault();
-			const seccion = document.querySelector(e.target.attributes.href.value);
+// 		enlace.addEventListener('click', (e)=>{
+// 			e.preventDefault();
+// 			const seccion = document.querySelector(e.target.attributes.href.value);
 
-			// if(e.target.attributes.href.value === 'postulate.html'){
-			// 	location.href='postulate.html';
+// 			// if(e.target.attributes.href.value === 'postulate.html'){
+// 			// 	location.href='postulate.html';
 
-			// }else if(e.target.attributes.href.value === 'index.html'){
-			// 	location.href='index.html';
-			// }else{
-			// 	seccion.scrollIntoView({
-			// 		behavior:'smooth'
-			// 	});
-			// }
+// 			// }else if(e.target.attributes.href.value === 'index.html'){
+// 			// 	location.href='index.html';
+// 			// }else{
+// 			// 	seccion.scrollIntoView({
+// 			// 		behavior:'smooth'
+// 			// 	});
+// 			// }
 			
-			seccion.scrollIntoView({
-				behavior:'smooth'
-			});
+// 			seccion.scrollIntoView({
+// 				behavior:'smooth'
+// 			});
 		
-			// const enlaceAnterior = document.querySelector('.navegacion a');
+// 			// const enlaceAnterior = document.querySelector('.navegacion a');
 			
-			// if(enlaceAnterior){
-			// 	enlaceAnterior.classList.remove('activo');
-			// }else{
-			// 	enlace.classList.add('activo');
-			// }
-			// if(e.target.tagName === 'A' ){
+// 			// if(enlaceAnterior){
+// 			// 	enlaceAnterior.classList.remove('activo');
+// 			// }else{
+// 			// 	enlace.classList.add('activo');
+// 			// }
+// 			// if(e.target.tagName === 'A' ){
 				
-			// 	enlace.classList.toggle('activo');
+// 			// 	enlace.classList.toggle('activo');
 			
-			// }
-			numeroEnlace = parseInt(e.target.dataset.numero);
+// 			// }
+// 			numeroEnlace = parseInt(e.target.dataset.numero);
 			
-			//enlace anterior
-			const enlaceAnterior = document.querySelector('.navegacion a');
+// 			//enlace anterior
+// 			const enlaceAnterior = document.querySelector('.navegacion a');
 
-			if(enlaceAnterior){
-				enlaceAnterior.classList.remove('activo');
-			}
-			const tab = document.querySelector(`[data-numero="${numeroEnlace}"]`);
-			tab.classList.add('activo')
+// 			if(enlaceAnterior){
+// 				enlaceAnterior.classList.remove('activo');
+// 			}
+// 			const tab = document.querySelector(`[data-numero="${numeroEnlace}"]`);
+// 			tab.classList.add('activo')
 		
-		});
-	});
-}
+// 		});
+// 	});
+// }
 

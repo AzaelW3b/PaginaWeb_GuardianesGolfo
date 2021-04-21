@@ -15,3 +15,21 @@
     @content;
   }
 }
+
+
+@mixin flex-align-justify {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin alineado-verticalmente($posicion){
+    display: flex;
+    align-items: $posicion;
+}
+
+@mixin grid($numColumnas, $tamanio){
+  display: grid;
+  grid-template-columns: repeat($numColumnas, $tamanio);
+}
+

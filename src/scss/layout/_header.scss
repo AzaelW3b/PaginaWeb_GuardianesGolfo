@@ -1,13 +1,17 @@
 
 .cabezera{
-    background-image: url(/build/img/bg.jpg);
+    background-image: url(/src/img/bg8.jpg);
     background-position: center center;
-    @include tablet{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    @include escritorio{
+        background-image: url(/build/img/bg.jpg);
         background-position: top center;
-        background-attachment: fixed;
+     
     }
  
-    background-size: cover;
+   
     height: 100vh;
     min-height:80rem;
     position: relative;
@@ -27,8 +31,7 @@
 
 .contenido-header{
   
-    display: flex;
-    align-items: center;
+    @include alineado-verticalmente(center);
     position: relative;
     height: 100%;
     z-index: 1;

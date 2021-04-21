@@ -15,7 +15,7 @@
 // }
 
 .navegacion-contenido{
-   background-color: $azul;
+  background-color: $azul;
   position: fixed;
   z-index: 2;
   width: 100%;
@@ -25,9 +25,7 @@
 
 }
 .navegacion-contenedor{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+ @include flex-align-justify;
   padding: 1rem;
 
   p,a{
@@ -45,7 +43,7 @@
 }
 
 .navegacion.abrir{
-  animation: slide 1s ease;
+  animation: slide .5s;
   @include escritorio{
     display: none;
 
@@ -58,7 +56,7 @@
   right:0;
   top: 78px;
   width: 100%;
-  transition: all .3s ease;
+  // transition: all .3s ease;
   // background-color: rgba($azul, $alpha: .9);
   background-color: $azul;
   padding: 2rem;
@@ -230,13 +228,13 @@
 }
 @keyframes slide{
   0%{
-      opacity: 1;
-      transform: scale(1.1);
-      transform: translateX(-100%);
+   
+      // transform: scale(1.1);
+      transform: translateY(-100%);
   }
   100%{
-      opacity: 1;
-      transform: scale(1);
+      
+      // transform: scale(1);
       transform: translateY(0);
   }
 }

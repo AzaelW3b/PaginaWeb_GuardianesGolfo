@@ -1,18 +1,18 @@
-.informacion-extra{
-   display: grid;
-   grid-template-columns: repeat(2,1fr);
+.contenedor-beneficios{
+    overflow: hidden;
+  @include tablet{
+    @include grid(2,1fr);
+  }
 }
 
-.texto-informacion{
-    background-image: url(/src/img/contacto.jpg);
+.texto-beneficios{
+    background: url(/build/img/contacto.jpg) no-repeat fixed center center;
     height: 800px;
     background-size: cover;
-    background-repeat: no-repeat;
-    background-position:center center;
-    background-attachment: fixed;
     position: relative;
     display: flex;
-    align-items: center;
+    flex-direction:column;
+    justify-content: center;
     &::after{
         content: '';
         background-color: rgba($azul,.9);
@@ -25,16 +25,34 @@
     p{
         position: relative;
         z-index: 1;
-        font-size: 6rem;
+        font-size: 3.5rem;
         color: #fff;
         text-align: center;
+        font-weight: $bold;
+        @include tablet{
+            font-size: 6rem;
+        }
         
     }
 }
+.boton-informacion{
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+}
 .iconos-informacion{
-    margin-left: 3rem;
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
+  
+//   @include tablet{
+//     margin-left: 3rem;
+//     display: grid;
+//     grid-template-columns: repeat(2,1fr);
+
+//   }
+
+  @include escritorio{
+      margin-left: 3rem;
+      @include grid(2,1fr);
+  }
 }
 .icono{
     margin-top: 6rem;
@@ -47,6 +65,10 @@
     .txt-info{
         p{
             font-size: 2.2rem;
+            font-weight: bold;
+        }
+        span{
+            color: $amarillo;
         }
     }
 }
