@@ -36,25 +36,57 @@ img{
   margin: 0;
 }
 
-.boton{
-  text-decoration: none;
-  @include telefono{
-    background-color: unset;
-    font-weight: $bold;
+
+h1{
+  font-size: 3rem;
+  @include tablet{
+    font-size: 4rem;
   }
   @include escritorio{
-    background-color: $amarillo;
-    font-weight: $bold;
+    font-size: 6rem;
   }
-  color: #fff;
-  padding: 1rem 3rem;
-  font-weight: $bold;
-  font-size: 2rem;
-  transition: all .3s ease;
-  position: relative;
-  border: none;
-
-   
-  
+}
+h2{
+  font-size: 3.5rem;
+  @include tablet{
+    font-size: 3.6rem;
+  }
+  @include escritorio{
+    font-size: 5rem;
+  }
+}
+h3{
+  font-size: 2.2rem;
+  @include tablet{
+    font-size: 3rem;
+  }
 }
 
+p{
+  
+  font-size: 2rem;
+  @include tablet{
+    font-size: 2.2rem;
+  }
+}
+
+a{
+  font-size: 2rem;
+  @include tablet{
+    font-size: 1.8rem;
+  }
+}
+
+.boton-primario{
+  text-decoration: none;
+  background-color: $azul;
+  font-weight: bold;
+  color: #fff;
+  padding:1rem 4rem;
+  display: inline-block;
+  transition: background-color .3s ease;
+
+  &:hover{
+    background-color: $amarillo;
+  }
+}

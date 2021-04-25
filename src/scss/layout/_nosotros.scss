@@ -1,174 +1,221 @@
-.contenedor-nosotros{
-overflow: hidden;
-  .contenido-nosotros{ 
-    padding-top: 5rem;
-    height: 100vh;
-    min-height: 800px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+// .contenedor-nosotros{
+// overflow: hidden;
+//   .contenido-nosotros{ 
+//     padding-top: 5rem;
+//     height: 100vh;
+//     min-height: 800px;
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: center;
     
-    @include tablet{
-      flex-direction: row;
-      align-items: center;
-    }
+//     @include tablet{
+//       flex-direction: row;
+//       align-items: center;
+//     }
   
     
   
    
 
-  }
+//   }
  
   
-}
-.nosotros-texto{
+// }
+// .nosotros-texto{
  
-  @include escritorio{
-    padding:1.5rem 3rem;
-    // box-shadow: 0 .2em 1em rgba(116, 105, 105, 0.2);
-  }
+//   @include escritorio{
+//     padding:1.5rem 3rem;
+//     // box-shadow: 0 .2em 1em rgba(116, 105, 105, 0.2);
+//   }
 
-  background-color: #fff;
+//   background-color: #fff;
   
-  @include escritorio{
+//   @include escritorio{
     
-    &::before{
-      content: 'Sobre Nosotros';
-      font-size: 6rem;
-      font-weight: $bold;
-      color: $azul;
+//     &::before{
+//       content: 'Sobre Nosotros';
+//       font-size: 6rem;
+//       font-weight: $bold;
+//       color: $azul;
 
-      z-index: 3;
-      position: absolute;
-      // left: -193px;
-      // bottom: 163px;
-      // transform: rotate(-90deg);
-      top: -90px;
-      // left: 0;
-    }
-  }
+//       z-index: 3;
+//       position: absolute;
+//       // left: -193px;
+//       // bottom: 163px;
+//       // transform: rotate(-90deg);
+//       top: -90px;
+//       // left: 0;
+//     }
+//   }
 
-  @include tablet{
-    order: -1;
+//   @include tablet{
+//     order: -1;
     
-    // margin-right: -10rem;
-    // position: relative;
-    // z-index: 1;
-    // margin-top: 20rem;
-  }
+//     // margin-right: -10rem;
+//     // position: relative;
+//     // z-index: 1;
+//     // margin-top: 20rem;
+//   }
 
-  @include escritorio{
-    // margin-top: 0;
-    order: -1;
-    // margin-right: -10rem;
-    // margin-top: 10rem;
+//   @include escritorio{
+//     // margin-top: 0;
+//     order: -1;
+//     // margin-right: -10rem;
+//     // margin-top: 10rem;
    
-  }
+//   }
 
 
   
-  h2{
-    color: $amarillo;
-    text-align: left;
-    width: 95%;
-    @include telefono{
-      font-size: 2.2rem;
+//   h2{
+//     color: $amarillo;
+//     text-align: left;
+//     width: 95%;
+//     @include telefono{
+//       font-size: 2.2rem;
       
-    }
-    @include tablet{
-      font-size: 3rem;
-      line-height: 1.2;
-    }
-    @include escritorio{
-      font-size: 4rem;
-      line-height: 1.2;
-    }
+//     }
+//     @include tablet{
+//       font-size: 3rem;
+//       line-height: 1.2;
+//     }
+//     @include escritorio{
+//       font-size: 4rem;
+//       line-height: 1.2;
+//     }
 
     
   
-  }
+//   }
 
-  p{
-    @include tablet{
-      font-size: 2.2rem;
-    }
+//   p{
+//     @include tablet{
+//       font-size: 2.2rem;
+//     }
 
     
-  }
-}
+//   }
+// }
 
-.nosotros-imagen, .nosotros-texto{
+// .nosotros-imagen, .nosotros-texto{
 
-  @include tablet{
-    flex: 0 0 calc(50% - 1rem);
-  }
+//   @include tablet{
+//     flex: 0 0 calc(50% - 1rem);
+//   }
  
-}
+// }
 
 
-.ocultar{
-  display: none;
-}
+// .ocultar{
+//   display: none;
+// }
 
-video{
-  max-width: 95%;
+// video{
+//   max-width: 95%;
+//  @include tablet{
+//    height: 50%;
+//  }
+//  @include escritorio{
+
+//   height: 75%;
+//  }
+// }
+// .video{
+//   animation: slide 1.3s ease;
+// }
+
+// .pantallaCompleta{
+  
+//   position: fixed;
+//   z-index: 1;
+//   background-color: rgba(0,0,0,.5);
+//   width: 100%;
+//   height: 100%;
+//   top: 0;
+//   // display: flex;
+//   // justify-content: center;
+//   display: grid;
+//   place-items: center; //alinea vertical u horizontalmente
+// }
+
+
+//  @keyframes slide{
+//      0%{
+//          opacity: 0;
+//          transform: scale(1.1);
+//          transform: translateX(-100%);
+//      }
+//      100%{
+//          opacity: 1;
+//          transform: scale(1);
+//          transform: translateY(0);
+//      }
+// }
+
+// //boton para cerrar el videos
+
+// .btn-cerrar{
+//   width: 5rem;
+//   height: 5rem;
+//   background-color: $azul;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+  
+//   font-size: 3rem;
+//   border-radius: 50%;
+//   margin-top: -10rem;
+//   color: #fff;
+ 
+
+//   &:hover{
+//     cursor: pointer;
+//   }
+// }
+.contenedor-informacion-nosotros{
+  overflow: hidden;
+  padding-top: 5rem;
  @include tablet{
-   height: 50%;
- }
- @include escritorio{
-
-  height: 75%;
- }
-}
-.video{
-  animation: slide 1.3s ease;
-}
-
-.pantallaCompleta{
-  
-  position: fixed;
-  z-index: 1;
-  background-color: rgba(0,0,0,.5);
-  width: 100%;
-  height: 100%;
-  top: 0;
-  // display: flex;
-  // justify-content: center;
-  display: grid;
-  place-items: center; //alinea vertical u horizontalmente
-}
-
-
- @keyframes slide{
-     0%{
-         opacity: 0;
-         transform: scale(1.1);
-         transform: translateX(-100%);
-     }
-     100%{
-         opacity: 1;
-         transform: scale(1);
-         transform: translateY(0);
-     }
-}
-
-//boton para cerrar el videos
-
-.btn-cerrar{
-  width: 5rem;
-  height: 5rem;
-  background-color: $azul;
+  padding-top: 0;
+  height: 100vh;
+  min-height: 80rem;
   display: flex;
-  align-items: center;
+  flex-direction: column;
   justify-content: center;
-  
-  font-size: 3rem;
-  border-radius: 50%;
-  margin-top: -10rem;
-  color: #fff;
- 
+ }
+}
+.informacion-nosotros {
+  display: grid;
+  @include tablet{
+    @include grid(2,1fr);
+  }
 
-  &:hover{
-    cursor: pointer;
+}
+.informacion-nosotros-texto{
+  padding: 1rem;
+  h2{
+    color: $azul;
+    margin-bottom: 0;
+    text-transform: capitalize;
+    text-align: center;
+    @include tablet{
+      text-align: left;
+    }
+  }
+}
+.texto-info-nosotros{
+  h3{
+   
+    color: $amarillo;
+    
+  }
+}
+.contenedor-nosotros-imagen{
+  grid-row: 1/2;
+  @include tablet{
+  grid-row: unset;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   }
 }

@@ -1,5 +1,8 @@
 .contenedor-beneficios{
     overflow: hidden;
+  @include tabletAncha{
+      @include grid(2,1fr);
+  } 
   @include tablet{
     @include grid(2,1fr);
   }
@@ -22,25 +25,20 @@
         right: 0;
         bottom: 0;
     }
-    p{
+    h2{
         position: relative;
         z-index: 1;
-        font-size: 3.5rem;
         color: #fff;
         text-align: center;
-        font-weight: $bold;
-        @include tablet{
-            font-size: 6rem;
-        }
         
     }
 }
-.boton-informacion{
+.boton-beneficios{
     z-index: 1;
     display: flex;
     justify-content: center;
 }
-.iconos-informacion{
+.iconos-beneficios{
   
 //   @include tablet{
 //     margin-left: 3rem;
@@ -48,6 +46,14 @@
 //     grid-template-columns: repeat(2,1fr);
 
 //   }
+    @include tabletAncha{
+        @include grid(2,1fr);
+    }
+
+   @include tablet{
+       z-index: -1;
+       @include grid(2,1fr);
+   }
 
   @include escritorio{
       margin-left: 3rem;
@@ -58,17 +64,39 @@
     margin-top: 6rem;
     text-align: center;
     .icono-info{
+       
        color: $azul;
-       font-size: 8rem;
+       @include telefono{
+           font-size: 6rem;
+       }
+       @include tabletAncha{
+           font-size: 6rem;
+       }
+      
+       @include tablet{
+         font-size: 8rem;
+       }
+       
     }
 
-    .txt-info{
+    .txt-beneficios{
         p{
-            font-size: 2.2rem;
             font-weight: bold;
+            text-align: center;
+            @include tabletAncha{
+                margin-left:1rem;
+            }
+            @include tablet{
+                margin-left: 0;
+            }
+           
         }
         span{
             color: $amarillo;
+            display: block;
+            @include escritorio{
+                display: unset;
+            }
         }
     }
 }

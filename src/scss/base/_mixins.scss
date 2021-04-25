@@ -4,6 +4,13 @@
   }
 }
 
+@mixin tabletAncha {
+  @media(min-width:$tabletAncha){
+    @content;
+  }
+}
+
+
 @mixin tablet {
   @media(min-width:$tablet){
     @content;

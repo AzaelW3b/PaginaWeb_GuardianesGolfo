@@ -1,10 +1,7 @@
 
 .cabezera{
-    background-image: url(/src/img/bg8.jpg);
-    background-position: center center;
+    background: url(/src/img/bg8.jpg) no-repeat center center fixed;
     background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
     @include escritorio{
         background-image: url(/build/img/bg.jpg);
         background-position: top center;
@@ -50,12 +47,11 @@
     h1{
         text-transform: capitalize;
         color: #fff;
-        font-size: 3rem;
         text-align: center;
         margin: 0;
         @include tablet{
             text-align: left;
-            font-size: 5rem;
+            
         }
 
         span{
@@ -66,10 +62,10 @@
     }
     
 
-    p{
-        color: #fff;
-        font-size: 2rem;
-    }
+    // p{
+    //     color: #fff;
+        
+    // }
     
 }
 
@@ -89,12 +85,6 @@
     @include tablet{
         justify-content: flex-start;
     }
-    .btn-cabezera{
-        background-color: $amarillo;
-
-        &:hover{
-            cursor: pointer;
-        }
-    }
+    
 }
 

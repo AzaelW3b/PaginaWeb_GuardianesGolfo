@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', ()=>{
 
 	menuHamburguesa();
-	mostrarVideo();
+	// mostrarVideo();
 	
 
 });
@@ -29,41 +29,41 @@ AOS.init({
   });
 
 //Mostramos el video de la seccion de nosotros
-function mostrarVideo(){
-	const btnVideo = document.querySelector('#btn-video');
-	const video = document.querySelector('.video');
-	const divVideo = document.createElement('div');
-	const body = document.querySelector('body');
-	const btnCerrar = document.createElement('p');
-	btnCerrar.textContent = 'x';
-	btnCerrar.classList.add('btn-cerrar');
+// function mostrarVideo(){
+// 	const btnVideo = document.querySelector('#btn-video');
+// 	const video = document.querySelector('.video');
+// 	const divVideo = document.createElement('div');
+// 	const body = document.querySelector('body');
+// 	const btnCerrar = document.createElement('p');
+// 	btnCerrar.textContent = 'x';
+// 	btnCerrar.classList.add('btn-cerrar');
 
-	divVideo.appendChild(video);
-	divVideo.appendChild(btnCerrar);
-	btnVideo.addEventListener('click', e=>{
-		e.preventDefault();
-		video.classList.remove('ocultar');
+// 	divVideo.appendChild(video);
+// 	divVideo.appendChild(btnCerrar);
+// 	btnVideo.addEventListener('click', e=>{
+// 		e.preventDefault();
+// 		video.classList.remove('ocultar');
 
-		divVideo.classList.add('pantallaCompleta');
+// 		divVideo.classList.add('pantallaCompleta');
 		
 	
 	
 		
-		body.appendChild(divVideo);
-		console.log(divVideo);
+// 		body.appendChild(divVideo);
+// 		console.log(divVideo);
 
-	});
+// 	});
 	
-	divVideo.onclick = function(){
-		divVideo.remove();
+// 	divVideo.onclick = function(){
+// 		divVideo.remove();
 	
-	}
+// 	}
 
-	btnCerrar.onclick = function(){
-		divVideo.remove();
+// 	btnCerrar.onclick = function(){
+// 		divVideo.remove();
 	
-	}
-}
+// 	}
+// }
 
 function menuHamburguesa(){
 	const nav = document.querySelector('#hamburguesa button');

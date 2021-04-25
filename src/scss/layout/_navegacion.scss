@@ -36,7 +36,7 @@
 
 .navegacion-logo{
       p{
-        font-size: 2rem;
+        // font-size: 2rem;
         font-weight: $bold;
         
       }
@@ -60,12 +60,6 @@
   // background-color: rgba($azul, $alpha: .9);
   background-color: $azul;
   padding: 2rem;
-
-
-  a{
-    font-size: 2rem;
-   
-  }
 }
 
 .navegacion.abrir:active{
@@ -87,7 +81,7 @@
     a{
       text-decoration: none;
       padding: 1.5rem;
-      font-size: 1.8rem;
+      // font-size: 1.8rem;
       transition: all .3s ease;
       
   &:hover{
