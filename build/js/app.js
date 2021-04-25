@@ -1,11 +1,3 @@
-document.addEventListener('DOMContentLoaded', ()=>{
-
-	menuHamburguesa();
-	// mostrarVideo();
-	
-
-});
-
 //animaciones
 AOS.init();
 AOS.init({
@@ -27,43 +19,16 @@ AOS.init({
 	anchorPlacement: 'top-bottom',
   
   });
+document.addEventListener('DOMContentLoaded', ()=>{
 
-//Mostramos el video de la seccion de nosotros
-// function mostrarVideo(){
-// 	const btnVideo = document.querySelector('#btn-video');
-// 	const video = document.querySelector('.video');
-// 	const divVideo = document.createElement('div');
-// 	const body = document.querySelector('body');
-// 	const btnCerrar = document.createElement('p');
-// 	btnCerrar.textContent = 'x';
-// 	btnCerrar.classList.add('btn-cerrar');
+	menuHamburguesa();
+	ObservarSeccion();
+	actualizacionAnio();
+	
 
-// 	divVideo.appendChild(video);
-// 	divVideo.appendChild(btnCerrar);
-// 	btnVideo.addEventListener('click', e=>{
-// 		e.preventDefault();
-// 		video.classList.remove('ocultar');
+});
 
-// 		divVideo.classList.add('pantallaCompleta');
-		
-	
-	
-		
-// 		body.appendChild(divVideo);
-// 		console.log(divVideo);
 
-// 	});
-	
-// 	divVideo.onclick = function(){
-// 		divVideo.remove();
-	
-// 	}
-
-// 	btnCerrar.onclick = function(){
-// 		divVideo.remove();
-	
-// 	}
-// }
 
 function menuHamburguesa(){
 	const nav = document.querySelector('#hamburguesa button');
@@ -96,55 +61,55 @@ function menuHamburguesa(){
 	
 }
 
-// function scrollNav(){
-// 	const enlaces = document.querySelectorAll('.navegacion a');
-// 	let numeroEnlace = 1;
+const anio = new Date();
+const anioActual = anio.getFullYear();
 
-// 	enlaces.forEach(enlace =>{
-		
-// 		enlace.addEventListener('click', (e)=>{
-// 			e.preventDefault();
-// 			const seccion = document.querySelector(e.target.attributes.href.value);
+function actualizacionAnio(){
+    const contenedorAnio = document.querySelector('#fecha');
+    contenedorAnio.textContent = anioActual;
+}
 
-// 			// if(e.target.attributes.href.value === 'postulate.html'){
-// 			// 	location.href='postulate.html';
+const video = document.querySelector('.video');
+const body = document.querySelector('body');
 
-// 			// }else if(e.target.attributes.href.value === 'index.html'){
-// 			// 	location.href='index.html';
-// 			// }else{
-// 			// 	seccion.scrollIntoView({
-// 			// 		behavior:'smooth'
-// 			// 	});
-// 			// }
-			
-// 			seccion.scrollIntoView({
-// 				behavior:'smooth'
-// 			});
-		
-// 			// const enlaceAnterior = document.querySelector('.navegacion a');
-			
-// 			// if(enlaceAnterior){
-// 			// 	enlaceAnterior.classList.remove('activo');
-// 			// }else{
-// 			// 	enlace.classList.add('activo');
-// 			// }
-// 			// if(e.target.tagName === 'A' ){
-				
-// 			// 	enlace.classList.toggle('activo');
-			
-// 			// }
-// 			numeroEnlace = parseInt(e.target.dataset.numero);
-			
-// 			//enlace anterior
-// 			const enlaceAnterior = document.querySelector('.navegacion a');
+function ObservarSeccion(){
 
-// 			if(enlaceAnterior){
-// 				enlaceAnterior.classList.remove('activo');
-// 			}
-// 			const tab = document.querySelector(`[data-numero="${numeroEnlace}"]`);
-// 			tab.classList.add('activo')
-		
-// 		});
-// 	});
-// }
+    const observar = new IntersectionObserver(entries =>{
 
+        if(entries[0].isIntersecting){
+            mostrarVideo();
+        }
+    });
+
+    observar.observe(document.querySelector('.boton-info-nosotros'));
+}
+
+function mostrarVideo(){
+
+    const divVideo = document.createElement('div');
+    
+    video.classList.remove('ocultar');
+    divVideo.appendChild(video);
+    divVideo.classList.add('pantallaCompleta');
+    body.classList.add('fijar-body');
+    body.appendChild(divVideo);
+
+    console.log(divVideo);
+    btnCerrarVideo(divVideo);
+}
+
+function btnCerrarVideo(divVideo){
+    const btnCerrar = document.createElement('p');
+    btnCerrar.textContent = 'x';
+    btnCerrar.classList.add('btn-cerrar');
+    divVideo.appendChild(btnCerrar);
+
+     btnCerrar.onclick = function(){
+        divVideo.remove();
+        body.classList.remove('fijar-body');
+     }
+     divVideo.onclick = function(){
+         divVideo.remove();
+         body.classList.remove('fijar-body');
+     }
+}

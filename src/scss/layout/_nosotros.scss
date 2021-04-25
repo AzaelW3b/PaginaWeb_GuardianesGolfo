@@ -124,19 +124,7 @@
 //   animation: slide 1.3s ease;
 // }
 
-// .pantallaCompleta{
-  
-//   position: fixed;
-//   z-index: 1;
-//   background-color: rgba(0,0,0,.5);
-//   width: 100%;
-//   height: 100%;
-//   top: 0;
-//   // display: flex;
-//   // justify-content: center;
-//   display: grid;
-//   place-items: center; //alinea vertical u horizontalmente
-// }
+
 
 
 //  @keyframes slide{
@@ -154,24 +142,7 @@
 
 // //boton para cerrar el videos
 
-// .btn-cerrar{
-//   width: 5rem;
-//   height: 5rem;
-//   background-color: $azul;
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-  
-//   font-size: 3rem;
-//   border-radius: 50%;
-//   margin-top: -10rem;
-//   color: #fff;
- 
 
-//   &:hover{
-//     cursor: pointer;
-//   }
-// }
 .contenedor-informacion-nosotros{
   overflow: hidden;
   padding-top: 5rem;
@@ -219,3 +190,51 @@
   justify-content: center;
   }
 }
+
+
+.ocultar{
+  display: none;
+}
+
+.pantallaCompleta{
+  
+  position: fixed;
+  z-index: 2;
+  background-color: rgba(0,0,0,.5);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  display: grid;
+  place-items: center; //alinea vertical u horizontalmente
+}
+ .btn-cerrar{
+
+   width: 5rem;
+   height: 5rem;
+   background-color: $azul;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   font-size: 3rem;
+   border-radius: 50%;
+   margin-top: -10rem;
+   color: #fff;
+ 
+
+    &:hover{
+      cursor: pointer;
+    }
+ }
+ .video{
+    max-width: 95%;
+  @include tablet{
+     height: 50%;
+    }
+    @include escritorio{
+  
+     height: 75%;
+  }
+   }
+  .video{
+     animation: slide 1.3s;
+   }
