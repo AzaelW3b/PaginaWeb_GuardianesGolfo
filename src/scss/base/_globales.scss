@@ -79,13 +79,22 @@ a{
 
 .boton-primario{
   text-decoration: none;
-  background-color: $azul;
   font-weight: bold;
   color: #fff;
   padding:1rem 4rem;
   display: inline-block;
   transition: background-color .3s ease;
 
+  
+}
+.amarillo{
+  background-color: $amarillo;
+  &:hover{
+    background-color: $azul;
+  }
+}
+.azul{
+  background-color: $azul;
   &:hover{
     background-color: $amarillo;
   }

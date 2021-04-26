@@ -442,7 +442,6 @@ a {
 
 .boton-primario {
   text-decoration: none;
-  background-color: #122348;
   font-weight: bold;
   color: #fff;
   padding: 1rem 4rem;
@@ -450,7 +449,19 @@ a {
   transition: background-color .3s ease;
 }
 
-.boton-primario:hover {
+.amarillo {
+  background-color: #EFB810;
+}
+
+.amarillo:hover {
+  background-color: #122348;
+}
+
+.azul {
+  background-color: #122348;
+}
+
+.azul:hover {
   background-color: #EFB810;
 }
 
@@ -1272,7 +1283,7 @@ a {
 .banner-nosotros {
   padding-top: 5rem;
   background: url(/src/img/bannerNosotros.jpg);
-  height: 600px;
+  height: 650px;
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -1293,7 +1304,7 @@ a {
 .texto-banner-nosotros {
   position: relative;
   z-index: 1;
-  height: 93%;
+  height: 95%;
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -1321,9 +1332,7 @@ a {
 }
 
 .texto-conocenos h2 {
-  color: #fff;
-  background-color: #122348;
-  width: 70%;
+  color: #122348;
 }
 
 .texto-conocenos h2::before {
@@ -1348,6 +1357,10 @@ a {
   justify-content: center;
 }
 
+.contenido-texto-filosofia {
+  margin-right: 2rem;
+}
+
 .contenido-texto-filosofia h2 {
   color: #122348;
 }
@@ -1360,6 +1373,11 @@ a {
   content: '>';
   color: #EFB810;
   margin-right: 1rem;
+}
+
+.contenido-texto-filosofia p {
+  color: #122348;
+  text-align: justify;
 }
 
 .contenido-texto-filosofia .ultimo-filosofia {
@@ -1377,4 +1395,77 @@ a {
 .imagen-filosofia .frase-filosofia p {
   color: rgba(18, 35, 72, 0.5);
   font-style: italic;
+}
+
+.vista-servicios {
+  padding: 5rem;
+  background-image: url(/src/img/banner_servicios.jpg);
+  height: 65rem;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.vista-servicios::before {
+  content: '';
+  background-color: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.texto-vista-servicios {
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  height: 93%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.texto-vista-servicios h1 {
+  color: #fff;
+  background-color: rgba(18, 35, 72, 0.8);
+  padding: 2rem;
+}
+
+.texto-vista-servicios {
+  display: flex;
+  align-items: center;
+  height: 95%;
+}
+
+.seccion-servicio {
+  padding-top: 5rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5rem;
+}
+
+.seccion-servicio .mover-servicio2 {
+  grid-column: 2/3;
+}
+
+.seccion-servicio .mover-imagen2 {
+  grid-row: 1/2;
+}
+
+.txt-seccion-servicio p {
+  color: #122348;
+  text-align: justify;
+}
+
+.txt-seccion-servicio h2 {
+  color: #122348;
+}
+
+.txt-seccion-servicio h2::before {
+  content: '>';
+  color: #EFB810;
+  margin-right: 1rem;
 }
