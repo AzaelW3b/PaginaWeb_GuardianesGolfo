@@ -51,7 +51,7 @@ function versionWebp(){
 
 function javascript(){
     return src(paths.js)
-        .pipe(concat('app.js'))
+       
         .pipe(dest('./build/js'))
 
 
@@ -70,3 +70,4 @@ exports.watchArchivo = watchArchivo;
 exports.default = series (css, javascript, watchArchivo);
 exports.versionWebp = versionWebp;
 exports.imagenes = imagenes;
+

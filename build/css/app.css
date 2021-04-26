@@ -1244,6 +1244,13 @@ a {
 
 .enlaces-footer li {
   color: #EFB810;
+  list-style: none;
+}
+
+.enlaces-footer li::before {
+  content: '>';
+  padding-right: .5rem;
+  font-weight: bold;
 }
 
 .enlaces-footer li a {
@@ -1260,4 +1267,114 @@ a {
 
 .autor {
   color: #EFB810;
+}
+
+.banner-nosotros {
+  padding-top: 5rem;
+  background: url(/src/img/bannerNosotros.jpg);
+  height: 600px;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  position: relative;
+}
+
+.banner-nosotros::before {
+  content: '';
+  background-color: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.texto-banner-nosotros {
+  position: relative;
+  z-index: 1;
+  height: 93%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.texto-banner-nosotros h1 {
+  color: #fff;
+  background-color: rgba(18, 35, 72, 0.8);
+  padding: 2rem;
+}
+
+.vista-conocenos {
+  padding: 5rem;
+}
+
+@media (min-width: 768px) {
+  .contenedor-conocenos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+  .contenedor-conocenos .mover-imagen {
+    grid-row: 1/2;
+  }
+}
+
+.texto-conocenos h2 {
+  color: #fff;
+  background-color: #122348;
+  width: 70%;
+}
+
+.texto-conocenos h2::before {
+  content: '>';
+  color: #EFB810;
+  margin-right: 1rem;
+}
+
+.texto-conocenos p {
+  text-align: justify;
+  color: #122348;
+}
+
+.contenido-filosofia {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.contenedor-texto-filosofia {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contenido-texto-filosofia h2 {
+  color: #122348;
+}
+
+.contenido-texto-filosofia h2:first-of-type {
+  margin-top: 0;
+}
+
+.contenido-texto-filosofia h2::before {
+  content: '>';
+  color: #EFB810;
+  margin-right: 1rem;
+}
+
+.contenido-texto-filosofia .ultimo-filosofia {
+  margin-bottom: 0;
+  padding-bottom: 5rem;
+}
+
+.imagen-filosofia {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.imagen-filosofia .frase-filosofia p {
+  color: rgba(18, 35, 72, 0.5);
+  font-style: italic;
 }

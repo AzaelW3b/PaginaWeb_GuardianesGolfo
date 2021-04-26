@@ -103,6 +103,13 @@
     }
     li{
         color: $amarillo;
+        list-style: none;
+
+        &::before{
+            content: '>';
+            padding-right: .5rem;
+            font-weight: bold;
+        }
         
 
         a{

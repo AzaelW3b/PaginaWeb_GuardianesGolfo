@@ -1,27 +1,5 @@
-//animaciones
-AOS.init();
-AOS.init({
-	disable: false, 
-	startEvent: 'DOMContentLoaded', 
-	initClassName: 'aos-init', 
-	animatedClassName: 'aos-animate', 
-	useClassNames: false, 
-	disableMutationObserver: false, 
-	debounceDelay: 50,
-	throttleDelay: 99,
-
-	offset: 120, 
-	delay: 0, 
-	duration: 400, 
-	easing: 'ease', 
-	once: false, 
-	mirror: false, 
-	anchorPlacement: 'top-bottom',
-  
-  });
 document.addEventListener('DOMContentLoaded', ()=>{
 
-	menuHamburguesa();
 	ObservarSeccion();
 	actualizacionAnio();
 	
@@ -29,46 +7,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
 });
 
 
-
-function menuHamburguesa(){
-	const nav = document.querySelector('#hamburguesa button');
-	const navegacionNormal = document.querySelector('.navegacion');
-	const enlaces = document.querySelectorAll('.navegacion a');
-	const btnMenuMovil = document.querySelector('.menu-movil button');
-
-	nav.addEventListener('click', e =>{
-		
-		//.toggle, lo que hace es añadir la clase si no esta o desaparecerla si, si lo esta
-		nav.classList.toggle('abrir'); 
-		navegacionNormal.classList.toggle('abrir');
-		
-		
-	});	
-
-	//cuando en un elemento hay multiples nodos, debemos iterarlo para agregarle un evento
-	enlaces.forEach(enlace =>{
-		
-		enlace.addEventListener('click', e =>{
-			// console.log(e.target.tagName);
-
-			if(e.target.tagName === 'A'){
-				navegacionNormal.classList.remove('abrir');
-				btnMenuMovil.classList.remove('abrir');
-			}
-		});
-	});
-	
-	
-}
-
-const anio = new Date();
-const anioActual = anio.getFullYear();
-
-function actualizacionAnio(){
-    const contenedorAnio = document.querySelector('#fecha');
-    contenedorAnio.textContent = anioActual;
-}
-
+//Mostrar video
 const video = document.querySelector('.video');
 const body = document.querySelector('body');
 
@@ -94,7 +33,7 @@ function mostrarVideo(){
     body.classList.add('fijar-body');
     body.appendChild(divVideo);
 
-    console.log(divVideo);
+    // console.log(divVideo);
     btnCerrarVideo(divVideo);
 }
 
@@ -113,3 +52,25 @@ function btnCerrarVideo(divVideo){
          body.classList.remove('fijar-body');
      }
 }
+
+//animaciones
+AOS.init();
+AOS.init({
+	disable: false, 
+	startEvent: 'DOMContentLoaded', 
+	initClassName: 'aos-init', 
+	animatedClassName: 'aos-animate', 
+	useClassNames: false, 
+	disableMutationObserver: false, 
+	debounceDelay: 50,
+	throttleDelay: 99,
+
+	offset: 120, 
+	delay: 0, 
+	duration: 400, 
+	easing: 'ease', 
+	once: false, 
+	mirror: false, 
+	anchorPlacement: 'top-bottom',
+  
+  });
