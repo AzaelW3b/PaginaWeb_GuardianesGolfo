@@ -32,8 +32,6 @@ function mostrarVideo(){
     divVideo.classList.add('pantallaCompleta');
     body.classList.add('fijar-body');
     body.appendChild(divVideo);
-
-    // console.log(divVideo);
     btnCerrarVideo(divVideo);
 }
 
@@ -52,5 +50,3 @@ function btnCerrarVideo(divVideo){
          body.classList.remove('fijar-body');
      }
 }
-
-//animaciones
