@@ -1,6 +1,6 @@
 
 .banner-servicios{
-    background-color: #F7FDFB;
+    background-color:$azulBlanco;
     
     h2,p{
         text-align: center;
@@ -20,10 +20,7 @@
     padding: 1rem;
 }
 .informacion-servicio{
-   
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include direccion-flex-centrar-horizontal;
     margin-bottom: 2rem;
     text-align: center;
     p{
@@ -33,7 +30,6 @@
            
         }
         @include escritorio{
-            // text-align: center!important;
             width: 90%;
         }
 
@@ -42,17 +38,9 @@
     
 }
 .icono-servicio{
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   
+    @include direccion-flex-centrar-horizontal;
    h3{
        color: $amarillo;
        text-transform: capitalize;
    }
 }
-// .ultimo{
-//     grid-column: 2/4;
-// }
-
-

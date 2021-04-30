@@ -557,7 +557,7 @@ a {
 
 .menu-movil span {
   border-radius: 5px;
-  background-color: #fff;
+  background-color: #ffffff;
   display: block;
   width: 60%;
   margin: 5px auto;
@@ -702,7 +702,7 @@ a {
 
 .contenido-texto h1 {
   text-transform: capitalize;
-  color: #fff;
+  color: #ffffff;
   text-align: center;
   margin: 0;
 }
@@ -767,7 +767,7 @@ a {
   justify-content: center;
 }
 
-.texto-beneficios::after {
+.texto-beneficios::before {
   content: '';
   background-color: rgba(18, 35, 72, 0.9);
   position: absolute;
@@ -780,7 +780,7 @@ a {
 .texto-beneficios h2 {
   position: relative;
   z-index: 1;
-  color: #fff;
+  color: #ffffff;
   text-align: center;
 }
 
@@ -841,7 +841,7 @@ a {
 }
 
 .icono .txt-beneficios p {
-  font-weight: bold;
+  font-weight: 700;
   text-align: center;
 }
 
@@ -995,7 +995,7 @@ a {
 }
 
 .contenedor-historia h2 {
-  color: #fff;
+  color: #ffffff;
   text-align: center;
   padding-top: 4rem;
   margin-bottom: 0;
@@ -1052,7 +1052,7 @@ a {
 }
 
 .card .icono-card:hover i {
-  color: #fff;
+  color: #ffffff;
 }
 
 .texto-card p {
@@ -1060,7 +1060,7 @@ a {
 }
 
 .texto-card h3, .texto-card p {
-  color: #fff;
+  color: #ffffff;
   text-align: center;
 }
 
@@ -1211,12 +1211,12 @@ a {
 }
 
 .logo-footer img {
-  width: 150px;
+  width: 15rem;
 }
 
 .logo-footer p {
   font-size: 1.8rem;
-  color: #fff;
+  color: #ffffff;
   text-transform: capitalize;
   text-align: center;
 }
@@ -1233,7 +1233,7 @@ a {
 }
 
 .derechos-footer p {
-  color: #fff;
+  color: #ffffff;
   font-size: 1.8rem;
 }
 
@@ -1266,18 +1266,18 @@ a {
 
 .enlaces-footer li a {
   text-decoration: none;
-  color: #fff;
+  color: #ffffff;
 }
 
 .derechos-footer p {
-  font-weight: bold;
+  font-weight: 700;
   padding-bottom: 2rem;
   margin-bottom: 0;
   text-align: center;
 }
 
 .autor {
-  color: #EFB810;
+  color: #ffffff;
 }
 
 .banner-nosotros {

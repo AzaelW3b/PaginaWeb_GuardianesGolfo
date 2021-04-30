@@ -1,6 +1,6 @@
 .informacion-contacto{
     margin-top: 2rem;
-    background-color: #F7FDFB;
+    background-color:$azulBlanco;
  
 }
 .alinear-iconos-contacto{
@@ -14,11 +14,9 @@
 }
 
 .iconos-contacto{
-
   .icono-contacto{
 
-     display: flex;
-     justify-content: center;
+     @include centrar-justify;
      font-size: 3rem;
      color: $amarillo;
 
@@ -34,7 +32,6 @@
     }
 }
 .footer{
-    // background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(18,35,72,1) 50%, rgba(18,35,72,1) 100%);
     background-color: $azul;
 }
 .contenedor-footer{
@@ -58,17 +55,14 @@
    }
 }
 .logo-footer{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-   
+    @include direccion-flex-centrar-horizontal;
     img{
-        width: 150px;
+        width: 15rem;
 
     }
     p{
         font-size: 1.8rem;
-        color: #fff;
+        color: $blanco;
         text-transform: capitalize;
         text-align: center;
         
@@ -82,7 +76,7 @@
    }
 
    p{
-       color: #fff;
+       color:$blanco;
        font-size: 1.8rem;
 
        
@@ -90,9 +84,7 @@
 }
 .enlaces-footer{
     @include tablet{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        @include direccion-flex-centrar-horizontal;
     }
 
     h4{
@@ -114,7 +106,7 @@
 
         a{
             text-decoration: none;
-            color: #fff;
+            color:$blanco;
             
         }
        
@@ -122,7 +114,7 @@
 }
 .derechos-footer{
     p{
-        font-weight: bold;
+        font-weight: $bold;
         padding-bottom: 2rem;
         margin-bottom: 0;
         text-align: center;
@@ -131,5 +123,5 @@
     }
 }
 .autor{
-    color: $amarillo;
+    color: $blanco;
 }

@@ -40,3 +40,39 @@
   grid-template-columns: repeat($numColumnas, $tamanio);
 }
 
+@mixin difuminado-transparente($color){
+  &::before{
+    content: '';
+    background-color: $color;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+   
+  }
+}
+
+@mixin centrar-justify{
+    display: flex;
+    justify-content: center;
+}
+
+@mixin direccion-flex-centrar-vertical{
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+}
+
+@mixin  flex-centrar-ver-hor{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+@mixin direccion-flex-centrar-horizontal{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
