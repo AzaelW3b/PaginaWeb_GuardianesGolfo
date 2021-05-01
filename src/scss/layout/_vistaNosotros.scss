@@ -1,11 +1,8 @@
 .banner-nosotros{
     padding-top: 5rem;
-    background: url(/src/img/bannerNosotros.jpg);
-    height: 650px;
+    background: url(/src/img/bannerNosotros.jpg) no-repeat fixed center center;
+    height: 65rem;
     background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
     position: relative;
 
     @include difuminado-transparente($negroTransparente);
@@ -15,9 +12,7 @@
     position: relative;
     z-index: 1;
     height: 95%;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
+    @include alineado-verticalmente(center);
     h1{
        
         color: #fff;

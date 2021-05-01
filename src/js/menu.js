@@ -19,12 +19,10 @@ function menuHamburguesa(){
 		
 		
 	});	
-
 	//cuando en un elemento hay multiples nodos, debemos iterarlo para agregarle un evento
 	enlaces.forEach(enlace =>{
 		
 		enlace.addEventListener('click', e =>{
-			// console.log(e.target.tagName);
 
 			if(e.target.tagName === 'A'){
 				navegacionNormal.classList.remove('abrir');
