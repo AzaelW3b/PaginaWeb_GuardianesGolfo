@@ -97,11 +97,7 @@
         color: $amarillo;
         list-style: none;
 
-        &::before{
-            content: '>';
-            padding-right: .5rem;
-            font-weight: bold;
-        }
+        @include adorno-texto(.5rem);
         
 
         a{

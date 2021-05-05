@@ -465,6 +465,15 @@ a {
   background-color: #EFB810;
 }
 
+.contenedor-banner {
+  background-color: #F7FDFB;
+}
+
+.contenedor-banner h2, .contenedor-banner p {
+  text-align: center;
+  color: #122348;
+}
+
 .navegacion-contenido {
   background-color: #122348;
   top: 0;
@@ -1076,15 +1085,6 @@ a {
   justify-content: center;
 }
 
-.banner-servicios {
-  background-color: #F7FDFB;
-}
-
-.banner-servicios h2, .banner-servicios p {
-  text-align: center;
-  color: #122348;
-}
-
 @media (min-width: 1200px) {
   .contenedor-informacion-servicios {
     display: grid;
@@ -1260,8 +1260,9 @@ a {
 
 .enlaces-footer li::before {
   content: '>';
-  padding-right: .5rem;
-  font-weight: bold;
+  color: #EFB810;
+  margin-right: 0.5rem;
+  font-weight: 700;
 }
 
 .enlaces-footer li a {
@@ -1299,11 +1300,13 @@ a {
 }
 
 .texto-banner-nosotros {
+  width: 100%;
   position: relative;
   z-index: 1;
-  height: 95%;
+  height: 93%;
   display: flex;
   align-items: center;
+  justify-content: flex-start;
 }
 
 .texto-banner-nosotros h1 {
@@ -1335,6 +1338,7 @@ a {
   content: '>';
   color: #EFB810;
   margin-right: 1rem;
+  font-weight: 700;
 }
 
 .texto-conocenos p {
@@ -1369,6 +1373,7 @@ a {
   content: '>';
   color: #EFB810;
   margin-right: 1rem;
+  font-weight: 700;
 }
 
 .contenido-texto-filosofia p {
@@ -1394,13 +1399,10 @@ a {
 }
 
 .vista-servicios {
-  padding: 5rem;
-  background-image: url(/src/img/banner_servicios.jpg);
+  padding-top: 5rem;
+  background: url(/src/img/banner_servicios.jpg) no-repeat fixed center center;
   height: 65rem;
-  background-position: center center;
   background-size: cover;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
   position: relative;
 }
 
@@ -1464,4 +1466,5 @@ a {
   content: '>';
   color: #EFB810;
   margin-right: 1rem;
+  font-weight: 700;
 }

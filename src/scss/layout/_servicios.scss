@@ -1,12 +1,4 @@
 
-.banner-servicios{
-    background-color:$azulBlanco;
-    
-    h2,p{
-        text-align: center;
-        color: $azul;
-    }
-}
 .contenedor-informacion-servicios{
    @include escritorio{
     @include grid (3,1fr);
