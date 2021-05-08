@@ -74,16 +74,25 @@
       cursor: pointer;
     }
  }
- .video{
-    max-width: 95%;
-  @include tablet{
-     height: 50%;
-    }
-    @include escritorio{
+//  .video{
+//     max-width: 95%;
+//   @include tablet{
+//      height: 50%;
+//     }
+//     @include escritorio{
   
-     height: 75%;
+//      height: 75%;
+//   }
+//    }
+.video{
+  max-width: 95%;
+  height: 50%;
+
+  @include tablet{
+    max-width: 100%;
+    height: 550px;
   }
-   }
+}
   .video{
      animation: slide 1.3s;
    }

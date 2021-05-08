@@ -26,13 +26,14 @@
 .texto-icono-contacto{
     color: $azul;
     text-align: center;
+   
 
     h4, p{
         font-size: 1.8rem;
     }
 }
 .footer{
-    background-color: $azul;
+  background-color: $azul;
 }
 .contenedor-footer{
     @include grid(2,1fr);

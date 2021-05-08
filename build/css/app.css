@@ -378,6 +378,10 @@ img {
   margin: 0;
 }
 
+.no-margin-top {
+  margin-top: 0;
+}
+
 h1 {
   font-size: 3rem;
 }
@@ -972,17 +976,13 @@ a {
 
 .video {
   max-width: 95%;
+  height: 50%;
 }
 
 @media (min-width: 768px) {
   .video {
-    height: 50%;
-  }
-}
-
-@media (min-width: 1200px) {
-  .video {
-    height: 75%;
+    max-width: 100%;
+    height: 550px;
   }
 }
 
@@ -1083,6 +1083,10 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.contenedor-informacion-servicios {
+  overflow: hidden;
 }
 
 @media (min-width: 1200px) {
@@ -1287,6 +1291,7 @@ a {
   height: 65rem;
   background-size: cover;
   position: relative;
+  padding-top: 0;
 }
 
 .banner-nosotros::before {
@@ -1297,6 +1302,12 @@ a {
   left: 0;
   right: 0;
   bottom: 0;
+}
+
+@media (min-width: 768px) {
+  .banner-nosotros {
+    padding-top: 5rem;
+  }
 }
 
 .texto-banner-nosotros {
@@ -1315,8 +1326,30 @@ a {
   padding: 2rem;
 }
 
+.texto-banner-nosotros h1 {
+  width: 100%;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .texto-banner-nosotros {
+    width: 40%;
+    text-align: left;
+  }
+}
+
 .vista-conocenos {
+  overflow: hidden;
   padding: 5rem;
+}
+
+.contenedor-conocenos {
+  display: flex;
+  flex-direction: column;
+}
+
+.contenedor-conocenos .texto-conocenos {
+  order: 2;
 }
 
 @media (min-width: 768px) {
@@ -1325,8 +1358,31 @@ a {
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
   }
+  .contenedor-conocenos .texto-conocenos {
+    order: unset;
+  }
   .contenedor-conocenos .mover-imagen {
     grid-row: 1/2;
+  }
+}
+
+@media (min-width: 768px) {
+  .imagen-conocenos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .imagen-conocenos img {
+    transition: all .3s ease;
+  }
+  .imagen-conocenos img:hover {
+    transform: scale(1.1);
+  }
+}
+
+@media (min-width: 1200px) {
+  .imagen-conocenos {
+    display: unset;
   }
 }
 
@@ -1342,13 +1398,25 @@ a {
 }
 
 .texto-conocenos p {
-  text-align: justify;
   color: #122348;
+  text-align: left;
+}
+
+@media (min-width: 1200px) {
+  .texto-conocenos p {
+    text-align: justify;
+  }
 }
 
 .contenido-filosofia {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .contenido-filosofia {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .contenedor-texto-filosofia {
@@ -1358,11 +1426,24 @@ a {
 }
 
 .contenido-texto-filosofia {
-  margin-right: 2rem;
+  margin-right: 0;
+}
+
+@media (min-width: 768px) {
+  .contenido-texto-filosofia {
+    margin-right: 2rem;
+  }
 }
 
 .contenido-texto-filosofia h2 {
   color: #122348;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .contenido-texto-filosofia h2 {
+    text-align: left;
+  }
 }
 
 .contenido-texto-filosofia h2:first-of-type {
@@ -1376,9 +1457,11 @@ a {
   font-weight: 700;
 }
 
-.contenido-texto-filosofia p {
-  color: #122348;
-  text-align: justify;
+@media (min-width: 1200px) {
+  .contenido-texto-filosofia p {
+    color: #122348;
+    text-align: justify;
+  }
 }
 
 .contenido-texto-filosofia .ultimo-filosofia {
@@ -1396,6 +1479,92 @@ a {
 .imagen-filosofia .frase-filosofia p {
   color: rgba(18, 35, 72, 0.5);
   font-style: italic;
+}
+
+/*Valores*/
+.contenedor-valores {
+  padding: 5rem;
+  background-color: #F7FDFB;
+  transition: .3s ease all;
+}
+
+@media (min-width: 1200px) {
+  .contenido-valores {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.icono-plus::before {
+  content: '+';
+  text-align: center;
+  font-size: 3rem;
+  border: 5px solid #EFB810;
+  border-radius: 50%;
+  display: inline-block;
+  width: 4rem;
+  height: 4rem;
+  margin-right: 1rem;
+  color: #EFB810;
+}
+
+.icono-plus:hover {
+  cursor: pointer;
+}
+
+.ocultar-parrafo {
+  display: none;
+}
+
+.valor.activar .ocultar-parrafo {
+  display: block;
+  animation: slide .5s;
+}
+
+.valores .valor {
+  margin-bottom: 4rem;
+}
+
+@media (min-width: 768px) {
+  .valores .valor {
+    margin-bottom: 0;
+  }
+}
+
+.valores .valor h3 {
+  color: #122348;
+  width: 100%;
+}
+
+.valores .valor p {
+  margin-left: 2.2rem;
+  color: #122348;
+}
+
+.valores-imagen {
+  transition: .3s ease all;
+}
+
+@media (min-width: 768px) {
+  .valores-imagen {
+    display: flex;
+    justify-content: center;
+  }
+  .valores-imagen img {
+    width: 80%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .valores-imagen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 10rem;
+  }
+  .valores-imagen img {
+    width: 100%;
+  }
 }
 
 .vista-servicios {

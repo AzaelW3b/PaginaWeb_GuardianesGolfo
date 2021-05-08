@@ -1,5 +1,6 @@
 
 .contenedor-informacion-servicios{
+    overflow: hidden;
    @include escritorio{
     @include grid (3,1fr);
     gap: 2rem;
