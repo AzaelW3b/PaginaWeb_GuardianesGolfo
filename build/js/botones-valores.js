@@ -10,13 +10,13 @@ function iniciarApp(){
         boton.addEventListener('click',(e)=>{
           
             e.currentTarget.classList.toggle('activar');
-            console.log('botonxd', boton);
+         
 
             btnPlus.forEach((repetida)=>{
                 
                 if(boton !== repetida){
                     repetida.classList.remove('activar');
-                    console.log('repetidaxd',repetida);
+                 
                 }
             })
         });

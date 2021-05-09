@@ -28,6 +28,7 @@
   }
 }
 .texto-info-nosotros{
+  
   h3{
    
     color: $amarillo;
@@ -74,16 +75,15 @@
       cursor: pointer;
     }
  }
-//  .video{
-//     max-width: 95%;
-//   @include tablet{
-//      height: 50%;
-//     }
-//     @include escritorio{
-  
-//      height: 75%;
-//   }
-//    }
+ .boton-info-nosotros{
+   a{
+     display: block;
+     text-align: center;
+   }
+   @include tablet{
+     display: inline-block;
+   }
+ }
 .video{
   max-width: 95%;
   height: 50%;

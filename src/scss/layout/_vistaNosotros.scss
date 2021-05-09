@@ -2,8 +2,13 @@
     @include banner-bg-imagen( url(/src/img/bannerNosotros.jpg));
     @include difuminado-transparente($negroTransparente);
     padding-top: 0;
+    height: 45rem;
     @include tablet{
         padding-top: 5rem;
+        height: 90rem;
+    }
+    @include escritorio{
+        height: 65rem;
     }
 }
 
@@ -14,7 +19,7 @@
        text-align: center;
    }
    @include tablet{
-       width: 40%;
+       width: 50%;
        text-align: left;
    }
   
@@ -143,6 +148,7 @@
 
 /*Valores*/
 .contenedor-valores {
+    overflow: hidden;
     padding: 5rem;
     background-color:$azulBlanco;
     transition: .3s ease all;
@@ -153,24 +159,71 @@
         @include grid(3,1fr);
     }
  }
- 
-.icono-plus{
+ .texto-izquierda{
     &::before{
         content: '+';
         text-align: center;
-        font-size: 3rem;
-        border: 5px solid $amarillo;
-        border-radius: 50%;
+        font-size: 4rem;
+        
         display: inline-block;
         width: 4rem;
         height: 4rem;
-        margin-right: 1rem;
         color: $amarillo;
         
     }
     &:hover{
         cursor: pointer;
+        
     }
+ }
+ .parrafo-derecha{
+   @include escritorio{
+    text-align: right;
+   }
+ }
+ .texto-derecha{
+    text-align: left;
+    &::before{
+        content: '+';
+        font-size: 4rem;
+        
+        display: inline-block;
+        width: 4rem;
+        height: 4rem;
+        color: $amarillo;
+      
+        
+    }
+   @include escritorio{
+    &::before{
+        content: '';
+    }
+    text-align: right;
+    &::after{
+        content: '+';
+        font-size: 4rem;
+        
+        display: inline-block;
+        width: 4rem;
+        height: 4rem;
+        color: $amarillo;
+      
+        
+    }
+   }
+   
+
+    &:hover{
+        cursor: pointer;
+        
+    }
+ }
+.icono-plus{
+   font-size: 2rem;
+    @include tablet{
+        font-size: 3rem;
+    }
+ 
 }
 .ocultar-parrafo{
    display: none;
@@ -191,19 +244,14 @@
 
          
         }
-
-
-     
         h3{
-           
             color: $azul;
             width: 100%;
-
-         
         }  
         p{
             margin-left: 2.2rem;
             color: $azul;
+            transition: all .3s ease;
         }
            
     }
@@ -219,17 +267,19 @@
         }
     }
     @include escritorio{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
 
         img{
             width: 100%;
+            transition: all .3s ease;
+            &:hover{ 
+                transform: scale(1.2);
+            }
            
         }
-        margin-right: 10rem;
+      
        
     }
     
    
 }
+
