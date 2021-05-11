@@ -1809,7 +1809,7 @@ a {
   padding: 1rem 1rem;
   font-size: 1.8rem;
   border: none;
-  border-bottom: 2px solid #122348;
+  border: 1px solid #122348;
   outline: 0;
   font-weight: bold;
   color: #122348;
@@ -1817,7 +1817,7 @@ a {
 }
 
 .inputs-formulario-contratar input:focus {
-  border-bottom: 2px solid #EFB810;
+  border: 1px solid #EFB810;
   transition: all .3s ease;
   transform: scale(1.1);
 }
@@ -1857,4 +1857,20 @@ a {
 .boton-deshabilitado:hover {
   cursor: unset !important;
   background-color: #122348;
+}
+
+.mensaje-error {
+  background-color: #ff3333;
+  color: #ffffff;
+  font-weight: 700;
+  padding: 1rem;
+  text-align: center;
+}
+
+.mensaje-valido {
+  background-color: #22bb33;
+  color: #ffffff;
+  padding: 1rem;
+  text-align: center;
+  font-weight: 700;
 }

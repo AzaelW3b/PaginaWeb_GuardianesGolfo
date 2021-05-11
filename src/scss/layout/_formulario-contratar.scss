@@ -61,13 +61,13 @@
         padding: 1rem 1rem;
         font-size: 1.8rem;
         border: none;
-        border-bottom: 2px solid $azul;
+        border: 1px solid $azul;
         outline: 0;
         font-weight: bold;
         color: $azul;
         transition: all .3s ease;
         &:focus{
-            border-bottom: 2px solid $amarillo;
+            border: 1px solid $amarillo;
             transition: all .3s ease;
             transform: scale(1.1);
         }
@@ -112,4 +112,26 @@
         cursor: unset !important;
         background-color: $azul;
     }
+}
+
+// .borde-error{
+//    input{
+//      border-bottom: 2px solid red  !important;
+//    }
+// }
+.mensaje-error{
+    background-color: #ff3333;
+    color: $blanco;
+    font-weight: $bold;
+    padding: 1rem;
+    text-align: center;
+
+}
+
+.mensaje-valido{
+    background-color:  #22bb33;
+    color:$blanco;
+    padding: 1rem;
+    text-align: center;
+    font-weight: $bold;
 }
