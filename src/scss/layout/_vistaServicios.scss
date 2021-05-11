@@ -7,59 +7,57 @@
 .texto-vista-servicios{
    @include texto-bg-transparente;
 }
-.texto-vista-servicios{
-    display: flex;
-    align-items: center;
-    height: 95%;
-}
+// .texto-vista-servicios{
+//     display: flex;
+//     align-items: center;
+//     height: 95%;
+// }
 
-.seccion-servicio{
-    padding-top: 5rem; 
-    @include grid(2,1fr);
-    gap: 5rem;
+// .seccion-servicio{
+//     padding-top: 5rem; 
+//     @include grid(2,1fr);
+//     gap: 5rem;
 
-    .mover-servicio2{
-        grid-column: 2/3;
-    }
+//     .mover-servicio2{
+//         grid-column: 2/3;
+//     }
 
-    .mover-imagen2{
-        grid-row: 1/2;
-    }
-}
+//     .mover-imagen2{
+//         grid-row: 1/2;
+//     }
+// }
 
-.txt-seccion-servicio{
+// .txt-seccion-servicio{
   
-    p{
-         color: $azul;
-         text-align: justify;
-    }
-    h2{
-        color: $azul;
+//     p{
+//          color: $azul;
+//          text-align: justify;
+//     }
+//     h2{
+//         color: $azul;
 
-        @include adorno-texto(1rem);
-    }
-}
-//Lista de los servicios
-.lista-servicios{
-    padding-left: 0;
-    li{
-        display: flex;
-        align-items: center;
-        list-style: none;
-        font-size: 4rem;
-        font-weight: bold;
-        @include adorno-texto(.5rem);
-    }
-    p{
-        margin-right: 1rem;
-    }
-}
+//         @include adorno-texto(1rem);
+//     }
+// }
+// //Lista de los servicios
+// .lista-servicios{
+//     padding-left: 0;
+//     li{
+//         display: flex;
+//         align-items: center;
+//         list-style: none;
+//         font-size: 4rem;
+//         font-weight: bold;
+//         @include adorno-texto(.5rem);
+//     }
+//     p{
+//         margin-right: 1rem;
+//     }
+// }
 
 //boton de contratar
 .boton-contratar-servicio{
     margin-top: 5rem;
-   display: flex;
-   justify-content: center;
     button{
         font-size: 2rem;
         border: none;
@@ -67,5 +65,124 @@
         &:hover{
             cursor: pointer;
         }
+    }
+}
+.contenedor-menu-servicios{
+    padding: $separacion;
+    @include escritorio{
+        @include grid(4,1fr);
+        column-gap: 1rem;
+        
+    }
+    
+}
+.menu-servicio{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid $azul;
+    height: 20rem;
+    opacity: .5;
+    background-color: $azulBlanco;
+    svg{
+        transition: all .3s ease;
+        // width: 6.4rem;
+        // height: 6.4rem;
+        width: 10rem;
+        height: 10rem;
+    
+    }
+    p{
+        display: none;
+        color: $azul;
+        animation: slide .3s ease;
+    }
+    &:hover{
+        opacity: 1;
+        cursor: pointer;
+        path{
+            fill: $amarillo;
+        }
+        svg{
+            transform: scale(1.2);
+        }
+        p{
+            display: block;
+           
+        }
+    }
+    
+}
+.servicio-activo{
+        border: 1.5px solid $amarillo;
+        opacity: 1;
+        cursor: pointer;
+        path{
+            fill: $amarillo;
+        }
+        svg{
+            transform: scale(1.2);
+        }
+        p{
+            display: block;
+           
+        }
+    
+}
+.contenedor-descripcion-servicios{
+    overflow: hidden;
+    padding: 0 $separacion;
+}
+.descripcion-servicio{
+    
+   display: none;
+   justify-content: space-between;
+}
+.descripcion-activa{
+    display: flex;
+}
+
+.descripcion-texto-servicio{
+    padding: 1rem;
+     p{
+         color: $azul;
+         font-size: 2rem;
+       
+         
+     }
+}
+.ventajas-servicios{
+    padding-left:0;
+
+    li{
+       color: $amarillo; 
+       display: flex;
+       list-style: none;
+    }
+    p{
+        color: $azul;
+        margin: 1rem 0;
+        font-size: 2rem;
+
+    }
+    path{
+        fill: $amarillo;
+    }
+    svg{
+        margin-right: 1rem;
+        width: 2rem;
+        order: -1;
+    }
+}
+.descripcion-texto-servicio, .descripcion-imagen-servicio{
+    flex:0 0  calc(50% - 1rem);
+}
+.descripcion-imagen-servicio{
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    img{
+        height: 55rem;
     }
 }
