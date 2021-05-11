@@ -5,8 +5,12 @@ const servicio = document.querySelector('#servicio');
 const mensaje = document.querySelector('#mensaje');
 const formulario = document.querySelector('.formulario-contratar');
 const boton = document.querySelector('.boton-contratar');
+const botonServicio = document.querySelectorAll('.boton-contratar-servicio button');
+const contenedorServicio = document.querySelector('.contenedor-formulario-contratar');
 const expresionRegular = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 const nombreER = new RegExp('^[a-zA-Z Ñ-ñ]+$');
+const body1 = document.querySelector('body');
+const btnCerrar = document.querySelector('.boton-cerrar p');
 
 document.addEventListener('DOMContentLoaded', () => {
     iniciarApp();
@@ -152,3 +156,28 @@ function eliminarMensajesError(){
         error.remove();
     }
 }
+
+addEventoBoton();
+function addEventoBoton(){
+    botonServicio.forEach(btnServicio =>{
+        btnServicio.addEventListener('click', ()=>{
+            mostrarServicio();
+        });
+    });
+}
+
+function mostrarServicio(){
+    const nuevoDiv = document.createElement('nuevoDiv');
+    formulario.classList.remove('ocultar-formulario');
+    nuevoDiv.appendChild(formulario);
+    nuevoDiv.classList.add('pantallaCompleta');
+    body1.classList.add('fijar-body');
+    body1.appendChild(nuevoDiv);
+
+    btnCerrar.onclick = function(){
+        nuevoDiv.remove();
+        formulario.classList.add('ocultar-formulario');
+        body1.classList.remove('fijar-body');
+     }
+}
+

@@ -1,13 +1,21 @@
+.ocultar-formulario{
+    display: none;
+}
+.contenedor-formulario-contratar{
+    display: flex;
+    justify-content: center;
+}
 .formulario-contratar{
+    animation: slideX .3s ease;
+    background-color: $blanco;
     -webkit-box-shadow: 10px 13px 19px -14px rgba(0,0,0,0.75);
     -moz-box-shadow: 10px 13px 19px -14px rgba(0,0,0,0.75);
     box-shadow: 10px 13px 19px -14px rgba(0,0,0,0.75);
     padding: 2rem;
     @include tablet{
-        padding: 5rem;
+        padding: 0  5rem  5rem 5rem;
     }
  
-    border-radius: 2%;
     width: 100%;
     @include tablet{
         width: 80%;
@@ -15,8 +23,7 @@
 }
 .encabezado-formulario{
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    justify-content: flex-end;
 }
 .texto-encabezado-formulario{
     p{
@@ -113,12 +120,6 @@
         background-color: $azul;
     }
 }
-
-// .borde-error{
-//    input{
-//      border-bottom: 2px solid red  !important;
-//    }
-// }
 .mensaje-error{
     background-color: #ff3333;
     color: $blanco;

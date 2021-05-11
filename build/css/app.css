@@ -1682,6 +1682,7 @@ a {
 
 .contenedor-menu-servicios {
   padding: 5rem;
+  margin-top: 5rem;
 }
 
 @media (min-width: 1200px) {
@@ -1750,17 +1751,31 @@ a {
   display: block;
 }
 
+@keyframes slideX {
+  0% {
+    transform: scale(1.1);
+    transform: translateX(-100%);
+  }
+  50% {
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
 .contenedor-descripcion-servicios {
   overflow: hidden;
   padding: 0 5rem;
 }
 
 .descripcion-servicio {
+  animation: slideX .3s ease;
   display: none;
   justify-content: space-between;
 }
 
 .descripcion-activa {
+  animation: slideX .3s ease;
   display: flex;
 }
 
@@ -1813,18 +1828,28 @@ a {
   height: 55rem;
 }
 
+.ocultar-formulario {
+  display: none;
+}
+
+.contenedor-formulario-contratar {
+  display: flex;
+  justify-content: center;
+}
+
 .formulario-contratar {
+  animation: slideX .3s ease;
+  background-color: #ffffff;
   -webkit-box-shadow: 10px 13px 19px -14px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 10px 13px 19px -14px rgba(0, 0, 0, 0.75);
   box-shadow: 10px 13px 19px -14px rgba(0, 0, 0, 0.75);
   padding: 2rem;
-  border-radius: 2%;
   width: 100%;
 }
 
 @media (min-width: 768px) {
   .formulario-contratar {
-    padding: 5rem;
+    padding: 0  5rem  5rem 5rem;
   }
 }
 
@@ -1836,8 +1861,7 @@ a {
 
 .encabezado-formulario {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
 }
 
 .texto-encabezado-formulario p {

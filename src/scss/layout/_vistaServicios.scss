@@ -7,53 +7,6 @@
 .texto-vista-servicios{
    @include texto-bg-transparente;
 }
-// .texto-vista-servicios{
-//     display: flex;
-//     align-items: center;
-//     height: 95%;
-// }
-
-// .seccion-servicio{
-//     padding-top: 5rem; 
-//     @include grid(2,1fr);
-//     gap: 5rem;
-
-//     .mover-servicio2{
-//         grid-column: 2/3;
-//     }
-
-//     .mover-imagen2{
-//         grid-row: 1/2;
-//     }
-// }
-
-// .txt-seccion-servicio{
-  
-//     p{
-//          color: $azul;
-//          text-align: justify;
-//     }
-//     h2{
-//         color: $azul;
-
-//         @include adorno-texto(1rem);
-//     }
-// }
-// //Lista de los servicios
-// .lista-servicios{
-//     padding-left: 0;
-//     li{
-//         display: flex;
-//         align-items: center;
-//         list-style: none;
-//         font-size: 4rem;
-//         font-weight: bold;
-//         @include adorno-texto(.5rem);
-//     }
-//     p{
-//         margin-right: 1rem;
-//     }
-// }
 
 //boton de contratar
 .boton-contratar-servicio{
@@ -69,6 +22,7 @@
 }
 .contenedor-menu-servicios{
     padding: $separacion;
+    margin-top: 5rem;
     @include escritorio{
         @include grid(4,1fr);
         column-gap: 1rem;
@@ -77,6 +31,7 @@
     
 }
 .menu-servicio{
+
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -130,16 +85,35 @@
         }
     
 }
+@keyframes slideX{
+    0%{
+     
+        transform: scale(1.1);
+        transform: translateX(-100%);
+        
+    }
+    50%{
+        
+    }
+    100%{
+        
+        // transform: scale(1);
+        transform: translateX(0);
+        
+    }
+  }
 .contenedor-descripcion-servicios{
     overflow: hidden;
     padding: 0 $separacion;
 }
 .descripcion-servicio{
+    animation: slideX .3s ease;
     
    display: none;
    justify-content: space-between;
 }
 .descripcion-activa{
+    animation: slideX .3s ease;
     display: flex;
 }
 
