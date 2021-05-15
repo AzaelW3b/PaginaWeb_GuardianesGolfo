@@ -15,7 +15,7 @@ const btnCerrar = document.querySelector('.boton-cerrar p');
 document.addEventListener('DOMContentLoaded', () => {
     iniciarApp();
     eventosFormulario();
-
+    addEventoBoton();
 });
 
 function iniciarApp() {
@@ -157,7 +157,7 @@ function eliminarMensajesError(){
     }
 }
 
-addEventoBoton();
+
 function addEventoBoton(){
     botonServicio.forEach(btnServicio =>{
         btnServicio.addEventListener('click', ()=>{
